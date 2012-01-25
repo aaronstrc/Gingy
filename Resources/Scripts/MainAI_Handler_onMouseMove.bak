@@ -1,0 +1,18 @@
+--------------------------------------------------------------------------------
+--  Handler.......... : onMouseMove
+--  Author........... : 
+--  Description...... : 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function MainAI.onMouseMove ( nPointX, nPointY, nDeltaX, nDeltaY, nRayPntX, nRayPntY, nRayPntZ, nRayDirX, nRayDirY, nRayDirZ )
+--------------------------------------------------------------------------------
+	
+	--
+	object.sendEvent ( this.hSimpleCamera1 ( ),  "SimpleCameraAI", "onMouseMove", 
+                       nPointX, nPointY, nDeltaX, nDeltaY, nRayPntX, 
+                       nRayPntY, nRayPntZ, nRayDirX, nRayDirY, nRayDirZ )
+	
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

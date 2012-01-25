@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function MainAI.onKeyboardKeyDown(kKeyCode)
+
+
+object.sendEvent(this.hSimpleCamera1(),"SimpleCameraAI","onKeyboardKeyDown",kKeyCode)
+object.sendEvent(this.hAvatar(),"AvatarAI","onKeyboardKeyDown",kKeyCode)
+
+
+end
