@@ -23,8 +23,8 @@ function AvatarAI.onKeyboardKeyDown ( kKeyCode )
     end
     if ( kKeyCode == input.kKeySpace ) and ( this.bJump ( ) == false ) then
         this.bJump ( true )
-        dynamics.setLinearVelocity ( this.hAvatar ( ), 0, 12, 0, object.kLocalSpace )
-        dynamics.addLinearImpulse ( this.hAvatar ( ), 0, 12, 0, object.kLocalSpace )
+        dynamics.setLinearVelocity ( this.hAvatar ( ), 0, 7, 0, object.kLocalSpace )
+        dynamics.addLinearImpulse ( this.hAvatar ( ), 0, 7, 0, object.kLocalSpace )
     end
 --------------------------------------------------------------------------------
 end
