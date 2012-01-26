@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+function EnemyAI.SearchingAI_onLoop()
+
+
+
+if(this.bSearching()==true)then
+this.updateNavigation()
+else
+this.targetAvatar()
+end
+this.updateDynamics()
+
+
+end

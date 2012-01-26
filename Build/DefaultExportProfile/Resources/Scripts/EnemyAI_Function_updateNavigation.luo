@@ -1,0 +1,44 @@
+
+
+
+
+
+
+
+function EnemyAI.updateNavigation()
+
+
+
+local nDistance=navigation.getTargetNodeDistance(this.hNavObject())
+
+
+if(this.bPathFound()==false or nDistance<0.1)then
+
+navigation.setSpeedLimit(this.hNavObject(),5)
+
+navigation.setAcceleration(this.hNavObject(),3)
+
+navigation.setPathMaxLength(this.hNavObject(),20)
+
+navigation.setRandomTargetNode(this.hNavObject())
+
+this.bPathFound(true)
+
+end
+
+
+
+local nAvatarDistance=object.getDistanceToObject(this.hEnemy(),this.hAvatar())
+
+
+if(nAvatarDistance<=10)then
+
+this.bSearching(false)
+
+end
+
+
+object.matchTranslation(this.hEnemy(),this.hNavObject(),object.kGlobalSpace)
+
+
+end

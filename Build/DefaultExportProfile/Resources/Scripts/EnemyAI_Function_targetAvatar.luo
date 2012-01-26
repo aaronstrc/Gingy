@@ -1,0 +1,59 @@
+
+
+
+
+
+
+
+function EnemyAI.targetAvatar()
+
+
+
+
+
+
+
+local bFoundNode=navigation.setNearestNode(this.hNavTarget(),this.hAvatar())
+
+
+if(this.hAvatar()~=nil and bFoundNode==true)then
+
+
+local hNode=navigation.getNode(this.hNavTarget())
+
+
+if(hNode~=nil)then
+
+navigation.setSpeedLimit(this.hNavObject(),5)
+
+navigation.setAcceleration(this.hNavObject(),8)
+
+navigation.setPathMaxLength(this.hNavObject(),20)
+
+navigation.setTargetNode(this.hNavObject(),hNode)
+
+
+end
+
+end
+
+
+
+local nAvatarDistance=object.getDistanceToObject(this.hEnemy(),this.hAvatar())
+
+
+if(nAvatarDistance<=1)then
+
+log.message(" attacked the avatar")
+
+elseif(nAvatarDistance>=13)then
+
+this.bSearching(true)
+
+end
+
+
+object.matchTranslation(this.hEnemy(),this.hNavObject(),object.kGlobalSpace)
+
+
+end

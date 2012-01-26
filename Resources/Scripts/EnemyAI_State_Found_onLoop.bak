@@ -1,21 +1,17 @@
 --------------------------------------------------------------------------------
---  State............ : SearchingAI
---  Author........... : Aaron Stricklin
+--  State............ : Found
+--  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function EnemyAI.SearchingAI_onLoop ( )
+function EnemyAI.Found_onLoop ( )
 --------------------------------------------------------------------------------
 	
-	--updates all code here
-    if(this.bSearching ( ) == true) then
-        this.updateNavigation ( )
-    else
-        this.targetAvatar ( )
-    end
-    this.updateDynamics ( )
-    
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------
