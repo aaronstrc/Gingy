@@ -1,18 +1,24 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  State............ : idle
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MainAI.onInit (  )
+function MouseAI.idle_onLoop ( )
 --------------------------------------------------------------------------------
-	--adds events to the scene
-    application.setCurrentUserScene ( "Scene1" )
-    this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
-    this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ))
-    this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
-    application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
+	
+    --code below changes the avatars mode
+    if ( this.nHandlerCount ( ) > 0 ) then
+    
+        this.handleRun ( )
+    
+    --if no keys are pressed then just idle
+    elseif ( this.nHandlerCount() <= 0) then
+        
+        this.handleIdle ( )
+        
+    end
     
 --------------------------------------------------------------------------------
 end

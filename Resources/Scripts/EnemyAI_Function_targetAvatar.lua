@@ -31,8 +31,7 @@ function EnemyAI.targetAvatar ( )
             navigation.setPathMaxLength ( this.hNavObject ( ), 20 )
 
             navigation.setTargetNode ( this.hNavObject ( ), hNode )
-
-        
+            
         end
     
     end

@@ -1,19 +1,17 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  Handler.......... : onMouseButtonDown
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MainAI.onInit (  )
+function MouseAI.onMouseButtonDown ( nButton, nPointX, nPointY, nRayPntX, nRayPntY, nRayPntZ, nRayDirX, nRayDirY, nRayDirZ )
 --------------------------------------------------------------------------------
-	--adds events to the scene
-    application.setCurrentUserScene ( "Scene1" )
-    this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
-    this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ))
-    this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
-    application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
-    
+	
+	--
+	-- handler that sends events for punch
+    this.bPunch ( true )
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

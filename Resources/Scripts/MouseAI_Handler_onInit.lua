@@ -5,14 +5,18 @@
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MainAI.onInit (  )
+function MouseAI.onInit (  )
 --------------------------------------------------------------------------------
-	--adds events to the scene
-    application.setCurrentUserScene ( "Scene1" )
-    this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
-    this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ))
-    this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
-    application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
+	
+    --sets the avatar object
+    this.hMouse ( this.getObject ( ) )
+    
+    --calls the a function to set the animations modes
+    if(this.hMouse ( ) ~= nil) then
+        this.setAnimations ( )
+        this.setIdle ( )
+        
+    end
     
 --------------------------------------------------------------------------------
 end

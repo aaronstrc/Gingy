@@ -1,19 +1,17 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  State............ : idle
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MainAI.onInit (  )
+function MouseAI.idle_onLeave ( )
 --------------------------------------------------------------------------------
-	--adds events to the scene
-    application.setCurrentUserScene ( "Scene1" )
-    this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
-    this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ))
-    this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
-    application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
-    
+	
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

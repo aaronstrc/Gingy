@@ -1,19 +1,18 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onInit
+--  Handler.......... : onSensorCollision
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MainAI.onInit (  )
+function MouseAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
 --------------------------------------------------------------------------------
-	--adds events to the scene
-    application.setCurrentUserScene ( "Scene1" )
-    this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
-    this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ))
-    this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
-    application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
-    
+	
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	-- This handler is called when a sensor collision occurs.
+	--
+	this.setPunch (  )
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------
