@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function MainAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+
+
+
+object.sendEvent(this.hAvatar(),"AvatarAI","onSensorCollision",nSensorID,hTargetObject,nTargetSensorID)
+
+end

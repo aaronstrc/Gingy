@@ -43,7 +43,33 @@ function EnemyAI.targetAvatar ( )
     --if gingy isn't far from the enemy then the enemy goes into the found State
     if(nAvatarDistance <= 1) then
         
-        log.message ( " attacked the avatar" )
+        --gets the count of aiModels on the hEnemy
+        local nCount = object.getAIModelCount ( this.hEnemy ( ) )
+        
+        --loops through the ai models to send the hit animation
+        for i = 0, nCount - 1, 1 
+        do
+            
+            local sAIName = object.getAIModelNameAt ( this.hEnemy ( ), i )
+            
+            --if its not the enemy ai then Send an event to that ai to attack
+            if( sAIName ~= "EnemyAI") then
+            
+                
+                local bHasHandler = object.hasAIEventHandler ( this.hEnemy ( ), sAIName, "onPunch" )
+                
+                --if it has the punch handler then send a message
+                if(bHasHandler == true) then
+                
+                    object.sendEvent ( this.hEnemy ( ), sAIName, "onPunch" )
+                    --log.message ( "attacked the avatar ")
+                
+                end
+                
+            end
+        	
+        end
+    
     
     elseif(nAvatarDistance >= 13) then
     

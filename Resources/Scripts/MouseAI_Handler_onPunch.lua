@@ -1,25 +1,21 @@
 --------------------------------------------------------------------------------
---  State............ : idle
+--  Handler.......... : onPunch
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MouseAI.idle_onLoop ( )
+function MouseAI.onPunch (  )
 --------------------------------------------------------------------------------
 	
-    --[[code below changes the avatars mode
-    if ( this.nHandlerCount ( ) > 0 ) then
-    
-        this.handleRun ( )
-    
-    --if no keys are pressed then just idle
-    elseif ( this.nHandlerCount() <= 0) then
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	--if punch is not set then set it
+    if(this.bPunch ( ) == false) then
         
-        this.handleIdle ( )
-        
+        this.setPunch ( )
+    
     end
-    --]]
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

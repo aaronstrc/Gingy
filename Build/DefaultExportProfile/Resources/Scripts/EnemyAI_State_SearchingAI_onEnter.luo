@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function EnemyAI.SearchingAI_onEnter()
+
+
+this.setupNavigation()
+this.setupDynamics()
+
+
+end
+

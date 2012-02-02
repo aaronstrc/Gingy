@@ -1,25 +1,18 @@
 --------------------------------------------------------------------------------
---  State............ : idle
+--  Handler.......... : onSensorCollision
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MouseAI.idle_onLoop ( )
+function MainAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
 --------------------------------------------------------------------------------
 	
-    --[[code below changes the avatars mode
-    if ( this.nHandlerCount ( ) > 0 ) then
-    
-        this.handleRun ( )
-    
-    --if no keys are pressed then just idle
-    elseif ( this.nHandlerCount() <= 0) then
-        
-        this.handleIdle ( )
-        
-    end
-    --]]
+	--
+	-- Write your code here, using 'this' as current AI instance.
+	-- This handler is called when a sensor collision occurs.
+	--
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

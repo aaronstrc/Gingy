@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+function MouseAI.setAnimations()
+
+
+
+
+
+
+
+hashtable.add(this.htAnimations(),"idle",1)
+hashtable.add(this.htAnimations(),"idle_begin",54)
+hashtable.add(this.htAnimations(),"idle_end",120)
+
+
+hashtable.add(this.htAnimations(),"punch",2)
+hashtable.add(this.htAnimations(),"punch_begin",448)
+hashtable.add(this.htAnimations(),"punch_end",480)
+
+
+end
+

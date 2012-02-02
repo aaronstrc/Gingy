@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function MouseAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+
+
+
+this.setPunch()
+
+end

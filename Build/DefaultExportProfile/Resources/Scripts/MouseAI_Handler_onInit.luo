@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function MouseAI.onInit()
+
+
+
+this.hMouse(this.getObject())
+
+
+if(this.hMouse()~=nil)then
+this.setAnimations()
+this.setIdle()
+
+end
+
+
+end
+

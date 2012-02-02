@@ -42,3 +42,4 @@ object.matchTranslation(this.hEnemy(),this.hNavObject(),object.kGlobalSpace)
 
 
 end
+

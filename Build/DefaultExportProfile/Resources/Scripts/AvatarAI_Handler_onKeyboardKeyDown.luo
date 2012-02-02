@@ -23,8 +23,9 @@ this.nHandlerCount(this.nHandlerCount()+1)
 end
 if(kKeyCode==input.kKeySpace)and(this.bJump()==false)then
 this.bJump(true)
-dynamics.setLinearVelocity(this.hAvatar(),0,12,0,object.kLocalSpace)
-dynamics.addLinearImpulse(this.hAvatar(),0,12,0,object.kLocalSpace)
+dynamics.setLinearVelocity(this.hAvatar(),0,6.5,0,object.kLocalSpace)
+dynamics.addLinearImpulse(this.hAvatar(),0,6.5,0,object.kLocalSpace)
 end
 
 end
+

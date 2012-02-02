@@ -1,0 +1,20 @@
+
+
+
+
+
+
+
+function MouseAI.onPunch()
+
+
+
+
+
+if(this.bPunch()==false)then
+
+this.setPunch()
+
+end
+
+end

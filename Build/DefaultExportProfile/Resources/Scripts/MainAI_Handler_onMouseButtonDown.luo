@@ -12,3 +12,4 @@ object.sendEvent(this.hAvatar(),"AvatarAI","onMouseButtonDown",nButton,nPointX,n
 
 
 end
+

@@ -32,7 +32,6 @@ navigation.setPathMaxLength(this.hNavObject(),20)
 
 navigation.setTargetNode(this.hNavObject(),hNode)
 
-
 end
 
 end
@@ -44,7 +43,33 @@ local nAvatarDistance=object.getDistanceToObject(this.hEnemy(),this.hAvatar())
 
 if(nAvatarDistance<=1)then
 
-log.message(" attacked the avatar")
+
+local nCount=object.getAIModelCount(this.hEnemy())
+
+
+for i=0,nCount-1,1
+do
+
+local sAIName=object.getAIModelNameAt(this.hEnemy(),i)
+
+
+if(sAIName~="EnemyAI")then
+
+
+local bHasHandler=object.hasAIEventHandler(this.hEnemy(),sAIName,"onPunch")
+
+
+if(bHasHandler==true)then
+
+object.sendEvent(this.hEnemy(),sAIName,"onPunch")
+
+
+end
+
+end
+
+end
+
 
 elseif(nAvatarDistance>=13)then
 
@@ -57,3 +82,4 @@ object.matchTranslation(this.hEnemy(),this.hNavObject(),object.kGlobalSpace)
 
 
 end
+
