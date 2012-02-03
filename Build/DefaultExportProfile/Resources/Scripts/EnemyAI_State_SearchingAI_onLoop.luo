@@ -14,8 +14,7 @@ this.updateNavigation()
 else
 this.targetAvatar()
 end
-this.updateDynamics()
-
+this.updateLook()
 
 end
 

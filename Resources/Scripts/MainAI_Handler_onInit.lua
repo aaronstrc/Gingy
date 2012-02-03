@@ -12,6 +12,7 @@ function MainAI.onInit (  )
     this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
     this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ))
     this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
+    this.hFlag ( application.getCurrentUserSceneTaggedObject ( "flag" ))
     application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
     
 --------------------------------------------------------------------------------

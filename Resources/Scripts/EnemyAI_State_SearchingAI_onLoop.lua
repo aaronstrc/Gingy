@@ -14,8 +14,7 @@ function EnemyAI.SearchingAI_onLoop ( )
     else
         this.targetAvatar ( )
     end
-    this.updateDynamics ( )
-    
+    this.updateLook ( )
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

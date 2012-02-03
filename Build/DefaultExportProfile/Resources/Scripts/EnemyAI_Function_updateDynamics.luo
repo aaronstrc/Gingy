@@ -11,10 +11,10 @@ function EnemyAI.updateDynamics()
 
 
 
-
-local x,y,z=object.getTranslation(this.hEnemy(),object.kGlobalSpace)
-
+local hTarget=navigation.getTargetNode(this.hNavObject())
+local x,y,z=navigation.getNodeTranslation(application.getCurrentUserScene(),hTarget)
 local x2,y2,z2=object.getTranslation(this.hDynObject(),object.kGlobalSpace)
+log.message(x2," ",y2," ",z2)
 
 local fx,fy,fz=math.vectorSubtract(x2,y2,z2,x,y,z)
 
@@ -26,7 +26,7 @@ dynamics.setLinearDampingEx(this.hDynObject(),10,0,10)
 
 local tx,ty,tz=object.getTranslation(this.hEnemy(),object.kGlobalSpace)
 
-object.lookAt(this.hEnemy(),tx+fx,ty,tz+fz,object.kGlobalSpace,5*application.getLastFrameTime())
+object.lookAt(this.hEnemy(),tx+fx,ty,tz+fz,object.kGlobalSpace,5)
 
 
 end

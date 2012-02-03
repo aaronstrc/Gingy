@@ -9,17 +9,10 @@ function MouseAI.idle_onLoop()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+if(this.bPunch()==true and animation.getPlaybackCursor(this.hMouse(),0)>=hashtable.get(this.htAnimations(),"punch_end")-1)then
+this.bPunch(false)
+this.setIdle()
+end
 
 end
 

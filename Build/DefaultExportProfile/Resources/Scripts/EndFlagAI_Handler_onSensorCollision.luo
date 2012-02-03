@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function EndFlagAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+
+
+
+log.message(nSensorID," ",hTargetObject," ",nTargetSensorID)
+
+
+end

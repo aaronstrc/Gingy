@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+function MouseAI.setPunch()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hMouse(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hMouse(),0,hashtable.get(this.htAnimations(),"punch"))
+
+
+animation.setPlaybackKeyFrameBegin(this.hMouse(),0,hashtable.get(this.htAnimations(),"punch_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hMouse(),0,hashtable.get(this.htAnimations(),"punch_end"))
+
+end
+
+
+end
+

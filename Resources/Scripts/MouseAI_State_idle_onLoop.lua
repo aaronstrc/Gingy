@@ -8,18 +8,11 @@
 function MouseAI.idle_onLoop ( )
 --------------------------------------------------------------------------------
 	
-    --[[code below changes the avatars mode
-    if ( this.nHandlerCount ( ) > 0 ) then
-    
-        this.handleRun ( )
-    
-    --if no keys are pressed then just idle
-    elseif ( this.nHandlerCount() <= 0) then
-        
-        this.handleIdle ( )
-        
+    --if the jump sequence has ended set this.bJump ( ) to false
+    if( this.bPunch ( ) == true and animation.getPlaybackCursor ( this.hMouse( ), 0 ) >= hashtable.get (this.htAnimations ( ), "punch_end"  ) - 1 ) then
+        this.bPunch ( false )
+        this.setIdle ( )
     end
-    --]]
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

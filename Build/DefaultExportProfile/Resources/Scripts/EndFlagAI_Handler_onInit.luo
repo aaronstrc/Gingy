@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function EndFlagAI.onInit()
+
+
+
+this.hFlag(this.getObject())
+this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
+
+end
