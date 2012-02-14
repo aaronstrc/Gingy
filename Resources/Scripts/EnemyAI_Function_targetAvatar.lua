@@ -1,39 +1,30 @@
 --------------------------------------------------------------------------------
 --  Function......... : targetAvatar
---  Author........... : 
---  Description...... : 
+--  Author........... : Aaron Stricklin
+--  Description...... : updates the navigation to attack the avatar
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
 function EnemyAI.targetAvatar ( )
 --------------------------------------------------------------------------------
-	
-	--
-	-- updates the navigation to attack the avatar
-	--
-    
-    --gets distance between two nodes
-    local bFoundNode = navigation.setNearestNode ( this.hNavTarget ( ), this.hAvatar ( ) )
+
+    --gets the distance between the current enemy
+    --and the avatar
+    local nAvatarD = object.getDistanceToObject ( this.getObject ( ), this.hAvatar ( ) )
+    local nPathL = navigation.getPathNodeCount ( this.hNavObject ( ) )
     
 	-- In a updateNavigation () function
-    if(this.hAvatar ( ) ~= nil and  bFoundNode == true) then
+    if((this.hAvatar ( ) ~= nil and  nAvatarD >= 7) or nPathL < 1  ) then
     
-        --gets the target node and sets the path for the node
-        local hNode = navigation.getNode ( this.hNavTarget ( ) )
-        
-        --if the node exist then set is as a target and move
-        if(hNode ~= nil) then
+        --sets a new target node
+        navigation.setSpeedLimit ( this.hNavObject(), 5 )
+
+        navigation.setAcceleration ( this.hNavObject ( ), 8 )
+
+        navigation.setPathMaxLength ( this.hNavObject ( ), 20 )
             
-            navigation.setSpeedLimit ( this.hNavObject(), 5 )
+        navigation.setNearestTargetNode ( this.hNavObject ( ), this.hAvatar ( ) )
 
-            navigation.setAcceleration ( this.hNavObject ( ), 8 )
-
-            navigation.setPathMaxLength ( this.hNavObject ( ), 20 )
-
-            navigation.setTargetNode ( this.hNavObject ( ), hNode )
-            
-        end
-    
     end
     
     
@@ -41,7 +32,7 @@ function EnemyAI.targetAvatar ( )
     local nAvatarDistance = object.getDistanceToObject ( this.hEnemy ( ), this.hAvatar ( ) )
     
     --if gingy isn't far from the enemy then the enemy goes into the found State
-    if(nAvatarDistance <= 1) then
+    if(nAvatarDistance <= 1.5) then
         
         --gets the count of aiModels on the hEnemy
         local nCount = object.getAIModelCount ( this.hEnemy ( ) )

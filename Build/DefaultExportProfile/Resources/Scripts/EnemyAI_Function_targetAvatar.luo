@@ -10,19 +10,12 @@ function EnemyAI.targetAvatar()
 
 
 
+local nAvatarD=object.getDistanceToObject(this.getObject(),this.hAvatar())
+local nPathL=navigation.getPathNodeCount(this.hNavObject())
 
 
+if((this.hAvatar()~=nil and nAvatarD>=7)or nPathL<1)then
 
-local bFoundNode=navigation.setNearestNode(this.hNavTarget(),this.hAvatar())
-
-
-if(this.hAvatar()~=nil and bFoundNode==true)then
-
-
-local hNode=navigation.getNode(this.hNavTarget())
-
-
-if(hNode~=nil)then
 
 navigation.setSpeedLimit(this.hNavObject(),5)
 
@@ -30,9 +23,7 @@ navigation.setAcceleration(this.hNavObject(),8)
 
 navigation.setPathMaxLength(this.hNavObject(),20)
 
-navigation.setTargetNode(this.hNavObject(),hNode)
-
-end
+navigation.setNearestTargetNode(this.hNavObject(),this.hAvatar())
 
 end
 
@@ -41,7 +32,7 @@ end
 local nAvatarDistance=object.getDistanceToObject(this.hEnemy(),this.hAvatar())
 
 
-if(nAvatarDistance<=1)then
+if(nAvatarDistance<=1.5)then
 
 
 local nCount=object.getAIModelCount(this.hEnemy())
