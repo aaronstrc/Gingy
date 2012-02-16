@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+function HudAI.onIncreaseLife()
+
+
+
+local hLifeComponent=hud.getComponent(application.getCurrentUser(),"gingyLife.numLifes")
+
+this.nLife(this.nLife()+1)
+
+
+if(hLifeComponent and this.nLife()>-1)then
+
+hud.setLabelText(hLifeComponent,"x "..this.nLife())
+
+
+
+log.warning("earned a life")
+
+end
+
+
+end

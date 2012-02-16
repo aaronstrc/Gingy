@@ -8,13 +8,10 @@
 function MainAI.onInit (  )
 --------------------------------------------------------------------------------
 	--adds events to the scene
-    application.setCurrentUserScene ( "Scene1" )
-    
-    --adds the hud
-    local bHud = hud.newTemplateInstance ( application.getCurrentUser ( ), "gingyLife", "gingyLife" )
+    local bScene = application.setCurrentUserScene ( "Scene1" )
     
     --if the hud is create then create get other objects
-    if( bHud) then
+    if( bScene) then
     
         this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
         this.hSimpleCamera1 ( application.getCurrentUserSceneTaggedObject ( "SimpleCamera1" ))

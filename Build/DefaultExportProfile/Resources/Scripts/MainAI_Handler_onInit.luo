@@ -8,13 +8,10 @@
 function MainAI.onInit()
 
 
-application.setCurrentUserScene("Scene1")
+local bScene=application.setCurrentUserScene("Scene1")
 
 
-local bHud=hud.newTemplateInstance(application.getCurrentUser(),"gingyLife","gingyLife")
-
-
-if(bHud)then
+if(bScene)then
 
 this.hDirectionalLigh1(application.getCurrentUserSceneTaggedObject("DirectionalLight1"))
 this.hSimpleCamera1(application.getCurrentUserSceneTaggedObject("SimpleCamera1"))

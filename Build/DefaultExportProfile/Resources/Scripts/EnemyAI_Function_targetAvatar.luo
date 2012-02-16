@@ -34,6 +34,10 @@ local nAvatarDistance=object.getDistanceToObject(this.hEnemy(),this.hAvatar())
 
 if(nAvatarDistance<=1.5)then
 
+local Ax,Ay,Az=object.getTranslation(this.hAvatar(),object.kGlobalSpace)
+object.lookAt(this.hEnemy(),Ax,Ay,Az,object.kGlobalSpace,1)
+object.rotateAxisAngle(this.hEnemy(),0,1,0,180,object.kLocalSpace)
+
 
 local nCount=object.getAIModelCount(this.hEnemy())
 

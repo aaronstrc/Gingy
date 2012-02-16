@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function HudAI.Idle_onLoop()
+
+
+
+this.updateTimer()
+
+
+end

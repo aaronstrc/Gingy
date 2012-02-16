@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+function HudAI.updateTimer()
+
+
+
+local hTimeComponent=hud.getComponent(application.getCurrentUser(),"gingyLife.Timer")
+
+
+local nTElapsed=system.getTimeOfDay()-this.nStartTime()
+
+local nHours,nMinutes,nSeconds=this.calulateTime(nTElapsed)
+
+
+if(hTimeComponent)then
+
+
+local sHours=this.addZero(nHours)
+local sMinutes=this.addZero(nMinutes)
+local sSeconds=this.addZero(nSeconds)
+
+hud.setLabelText(hTimeComponent,sHours..":"..sMinutes..":"..sSeconds)
+else
+
+log.warning("what are you doing")
+
+end
+
+
+end

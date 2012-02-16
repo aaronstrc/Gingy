@@ -34,6 +34,10 @@ function EnemyAI.targetAvatar ( )
     --if gingy isn't far from the enemy then the enemy goes into the found State
     if(nAvatarDistance <= 1.5) then
         
+        local Ax, Ay, Az = object.getTranslation(this.hAvatar ( ), object.kGlobalSpace)
+        object.lookAt ( this.hEnemy ( ), Ax, Ay, Az, object.kGlobalSpace, 1 )
+        object.rotateAxisAngle ( this.hEnemy ( ), 0, 1, 0, 180, object.kLocalSpace )
+        
         --gets the count of aiModels on the hEnemy
         local nCount = object.getAIModelCount ( this.hEnemy ( ) )
         

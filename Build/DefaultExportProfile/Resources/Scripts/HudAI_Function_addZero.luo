@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+function HudAI.addZero(nValue)
+
+
+local sValue
+
+
+
+if(nValue<10)then
+
+sValue="0"..nValue
+
+else
+
+sValue=""..nValue
+
+end
+
+return sValue
+
+end

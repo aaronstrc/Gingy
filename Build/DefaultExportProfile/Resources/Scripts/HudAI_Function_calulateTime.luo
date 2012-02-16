@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+function HudAI.calulateTime(nTimeElapse)
+
+
+local nTLeft=nTimeElapse
+
+
+local nHours=math.floor(nTLeft/3600)
+
+
+nTLeft=nTLeft-(nHours*3600)
+local nMinutes=math.floor(nTLeft/60)
+
+
+nTLeft=nTLeft-(nMinutes*60)
+local nSeconds=nTLeft
+
+return nHours,nMinutes,nSeconds
+
+end

@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+function HudAI.onInit()
+
+
+local hUser=application.getCurrentUser()
+
+
+local bHud=hud.newTemplateInstance(hUser,"gingyLife","gingyLife")
+
+
+if(bHud)then
+
+
+local hLifeComponent=hud.getComponent(hUser,"gingyLife.numLifes")
+
+
+if(hLifeComponent)then
+
+hud.setLabelText(hLifeComponent,"x "..this.nLife())
+
+else
+
+log.warning("what are you doing")
+
+end
+
+
+local hSprinkleComponent=hud.getComponent(hUser,"gingyLife.numSprink")
+
+
+if(hSprinkleComponent)then
+
+hud.setLabelText(hSprinkleComponent,this.nSprinkles().." x")
+else
+
+log.warning("what are you doing")
+
+end
+
+
+local hTimeComponent=hud.getComponent(hUser,"gingyLife.Timer")
+
+
+if(hTimeComponent)then
+
+this.nStartTime(system.getTimeOfDay())
+
+hud.setLabelText(hTimeComponent,"00:00:00")
+
+else
+
+log.warning("what are you doing")
+
+end
+
+
+end
+
+end
