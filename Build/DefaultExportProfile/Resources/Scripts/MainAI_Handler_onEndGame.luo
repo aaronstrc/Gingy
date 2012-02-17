@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function MainAI.onEndGame()
+
+
+
+scene.setPaused(application.getCurrentUserScene(),true)
+
+
+end

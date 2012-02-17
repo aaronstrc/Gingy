@@ -8,7 +8,18 @@
 function MainAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
 
 
+log.warning(nSensorID,hTargetObject,nTargetSensorID)
 
-object.sendEvent(this.hFlag(),"EndFlagAI","onSensorCollision",nSensorID,hTargetObject,nTargetSensorID)
+
+local nAvatarID=sensor.getIDAt(this.hAvatar(),0)
+
+
+if(nAvatarID==nSensorID)then
+
+
+object.sendEvent(this.hAvatar(),"AvatarAI","onSensorCollision",nSensorID,hTargetObject,nTargetSensorID)
 
 end
+
+end
+

@@ -1,23 +1,16 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onKeyboardKeyDown
---  Author........... : 
+--  Handler.......... : onEndGame
+--  Author........... : Aaron Stricklin
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function MainAI.onKeyboardKeyDown ( kKeyCode )
+function MainAI.onEndGame (  )
 --------------------------------------------------------------------------------
 	
-    object.sendEvent ( this.hSimpleCamera1 ( ),  "SimpleCameraAI", "onKeyboardKeyDown", kKeyCode )
-    object.sendEvent ( this.hAvatar(),  "AvatarAI", "onKeyboardKeyDown", kKeyCode )
-
-
-    if(kKeyCode == input.kKeyEscape) then
-    
-        scene.setPaused ( application.getCurrentUserScene ( ), false )
-
-    end
-
+	--pauses the scene
+    scene.setPaused ( application.getCurrentUserScene ( ), true )
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------
