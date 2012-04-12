@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function SpiderAI.onRemoveEnemyAI()
+
+
+
+object.removeAIModel(this.hSpider(),"EnemyAI")
+
+
+end

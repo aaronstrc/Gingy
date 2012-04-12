@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function TimerAI.Idle_onEnter()
+
+
+
+this.nStartTime(system.getTimeOfDay())
+
+
+end

@@ -20,6 +20,12 @@ function AvatarAI.onKeyboardKeyUp ( kKeyCode )
     if ( kKeyCode == input.kKeyD ) then
         this.nHandlerCount ( this.nHandlerCount ( ) - 1)
     end
+    
+    if(this.nHandlerCount ( ) < 0) then
+    
+        this.nHandlerCount ( 0 )
+        
+    end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

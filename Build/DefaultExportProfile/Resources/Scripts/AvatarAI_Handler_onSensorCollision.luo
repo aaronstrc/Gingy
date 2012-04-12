@@ -7,34 +7,15 @@
 
 function AvatarAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
 
-
 local sOName=object.getModelName(hTargetObject)
 
-
-if(sOName=="Box1")then
-
-user.sendEvent(application.getCurrentUser(),"HudAI","onIncreaseLife")
+if(sOName~="gingy")then
 
 
-sensor.removeAll(hTargetObject)
 
 
-object.setVisible(hTargetObject,false)
-
-elseif(sOName=="sprinkle")then
-
-user.sendEvent(application.getCurrentUser(),"HudAI","onIncreaseSprinkles")
-
-
-sensor.removeAll(hTargetObject)
-
-
-object.setVisible(hTargetObject,false)
-
-elseif(sOName=="flag")then
-
-
-user.sendEvent(application.getCurrentUser(),"MainAI","onEndGame")
+this.bCollided(true)
+this.hCollided(hTargetObject)
 
 end
 

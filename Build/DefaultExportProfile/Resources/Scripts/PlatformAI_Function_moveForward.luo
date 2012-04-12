@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+function PlatformAI.moveForward()
+
+
+if(this.nCount()<this.nDistance())then
+
+
+object.translate(this.hPlatform(),0,0,this.moveInc(),object.kLocalSpace)
+
+
+this.nCount(this.nCount()+this.moveInc())
+
+else
+
+this.sDirection("back")
+
+end
+
+end

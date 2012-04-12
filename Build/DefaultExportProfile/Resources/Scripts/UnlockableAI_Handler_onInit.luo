@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function UnlockableAI.onInit()
+
+
+
+this.hUnlockable(this.getObject())
+
+
+this.hAvatar(scene.getTaggedObject(application.getCurrentUserScene(),this.sAvatar()))
+
+
+end

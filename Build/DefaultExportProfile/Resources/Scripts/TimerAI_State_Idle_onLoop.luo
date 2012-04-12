@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+function TimerAI.Idle_onLoop()
+
+
+
+local nElapsedT=system.getTimeOfDay()-this.nStartTime()
+
+
+
+if(this.nTime()<=nElapsedT)then
+
+
+scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hTimerObject())
+
+end
+
+
+
+end

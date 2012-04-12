@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function PlatformAI.onInit()
+
+
+
+this.hPlatform(this.getObject())
+
+
+end

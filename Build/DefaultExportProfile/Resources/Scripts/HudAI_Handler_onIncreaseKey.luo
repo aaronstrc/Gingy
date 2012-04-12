@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+function HudAI.onIncreaseKey()
+
+
+
+local hKeyComponent=hud.getComponent(application.getCurrentUser(),"gingyLife.numKey")
+
+this.nKeys(this.nKeys()+1)
+
+
+if(hKeyComponent)then
+
+hud.setLabelText(hKeyComponent,this.nKeys().." x")
+else
+
+log.warning("what are you doing")
+
+end
+
+
+end

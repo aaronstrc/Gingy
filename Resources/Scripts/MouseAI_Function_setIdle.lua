@@ -9,7 +9,7 @@ function MouseAI.setIdle ( )
 --------------------------------------------------------------------------------
 	
 	--
-	-- sets up the idle animation code for gingy
+	-- sets up the idle animation code for mouse
 	--
     local hasAnimation = object.hasController ( this.hMouse ( ), object.kControllerTypeAnimation )
     

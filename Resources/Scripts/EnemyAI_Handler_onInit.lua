@@ -11,7 +11,10 @@ function EnemyAI.onInit (  )
 	--initializes all variables
     this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ) )
     this.hEnemy ( this.getObject ( ) )
-	
+    
+    --pauses emitter
+    --sfx.pauseAllParticleEmitters ( this.hEnemy ( ) )
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

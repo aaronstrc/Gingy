@@ -1,0 +1,55 @@
+
+
+
+
+
+
+
+function AntiGingyAI.onHit()
+
+
+
+
+sound.play(this.hEnemy(),0,3,false,1)
+
+
+if(this.nAllowedHits()>1)then
+
+
+this.nAllowedHits(this.nAllowedHits()-1)
+
+
+if(math.floor(math.mod(this.nAllowedHits(),6))==0)then
+
+
+this.FallAndGetup()
+
+end
+
+else
+
+local x,y,z=object.getTranslation(this.hEnemy(),object.kGlobalSpace)
+
+
+local hFlag=scene.createRuntimeObject(application.getCurrentUserScene(),"flag")
+
+
+object.setTranslation(hFlag,x,y,z,object.kGlobalSpace)
+
+
+local x,y,z=object.getTranslation(this.hEnemy(),object.kGlobalSpace)
+
+
+
+local hRuntime=scene.createRuntimeObject(application.getCurrentUserScene(),this.sDeadEffect())
+
+
+object.setTranslation(hRuntime,x,y,z,object.kGlobalSpace)
+
+
+scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hEnemy())
+
+end
+
+
+end

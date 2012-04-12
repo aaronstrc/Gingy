@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function ObjectActivatorAI.onInit()
+
+
+
+this.hActivator(this.getObject())
+
+end

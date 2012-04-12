@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AntiGingyAI.Throwing_onLeave()
+
+
+
+this.bThrown(false)
+
+
+end

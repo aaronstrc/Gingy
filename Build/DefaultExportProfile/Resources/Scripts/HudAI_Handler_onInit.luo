@@ -11,6 +11,21 @@ function HudAI.onInit()
 local hUser=application.getCurrentUser()
 
 
+this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
+
+
+local x,y,z=object.getTranslation(this.hAvatar(),object.kGlobalSpace)
+local xR,yR,zR=object.getRotation(this.hAvatar(),object.kGlobalSpace)
+
+
+hashtable.add(this.htRespawn(),"xT",x)
+hashtable.add(this.htRespawn(),"yT",y)
+hashtable.add(this.htRespawn(),"zT",z)
+hashtable.add(this.htRespawn(),"xR",xR)
+hashtable.add(this.htRespawn(),"yR",yR)
+hashtable.add(this.htRespawn(),"zR",zR)
+
+
 local bHud=hud.newTemplateInstance(hUser,"gingyLife","gingyLife")
 
 
@@ -37,6 +52,20 @@ local hSprinkleComponent=hud.getComponent(hUser,"gingyLife.numSprink")
 if(hSprinkleComponent)then
 
 hud.setLabelText(hSprinkleComponent,this.nSprinkles().." x")
+else
+
+log.warning("what are you doing")
+
+end
+
+
+
+local hKeyComponent=hud.getComponent(hUser,"gingyLife.numKey")
+
+
+if(hKeyComponent)then
+
+hud.setLabelText(hKeyComponent,this.nKeys().." x")
 else
 
 log.warning("what are you doing")

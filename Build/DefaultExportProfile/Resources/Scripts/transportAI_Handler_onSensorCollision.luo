@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function transportAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+local sOName=object.getModelName(hTargetObject)
+
+
+if(sOName==this.sAvatar())then
+
+
+user.sendEvent(application.getCurrentUser(),"MainAI","onChangeScene",this.sDestination())
+
+end
+
+
+end

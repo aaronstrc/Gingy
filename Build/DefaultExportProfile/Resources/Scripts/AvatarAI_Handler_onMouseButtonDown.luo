@@ -13,5 +13,29 @@ function AvatarAI.onMouseButtonDown(nButton,nPointX,nPointY,nRayPntX,nRayPntY,nR
 this.bPunch(true)
 
 
+if(this.bCollided())then
+
+
+local nAiModels=object.getAIModelCount(this.hCollided())
+
+
+for i=0,nAiModels-1,1 do
+
+
+local sAiName=object.getAIModelNameAt(this.hCollided(),i)
+
+local bOnHit=object.hasAIEventHandler(this.hCollided(),sAiName,"onHit")
+
+
+if(bOnHit)then
+
+
+object.sendEvent(this.hCollided(),sAiName,"onHit")
+
+end
+end
+end
+
+
 end
 

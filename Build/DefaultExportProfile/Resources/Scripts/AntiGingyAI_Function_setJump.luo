@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+function AntiGingyAI.setJump()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hEnemy(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hEnemy(),0,hashtable.get(this.htAnimations(),"jump"))
+
+
+
+
+
+animation.setPlaybackKeyFrameBegin(this.hEnemy(),0,hashtable.get(this.htAnimations(),"jump_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hEnemy(),0,hashtable.get(this.htAnimations(),"jump_end"))
+
+end
+
+
+
+end

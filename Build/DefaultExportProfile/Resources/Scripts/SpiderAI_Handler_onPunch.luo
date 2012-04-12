@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function SpiderAI.onPunch()
+
+
+
+
+
+if(this.bPunch()==false)then
+
+this.setPunch()
+this.bPunch(true)
+this.checkHitAvatar()
+
+end
+
+end
+

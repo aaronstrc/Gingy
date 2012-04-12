@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function SpiderAI.onInit()
+
+
+
+this.hSpider(this.getObject())
+
+
+if(this.hSpider()~=nil)then
+this.setAnimations()
+this.setIdle()
+
+end
+
+
+end
+

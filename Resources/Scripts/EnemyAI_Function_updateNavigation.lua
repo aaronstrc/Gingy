@@ -33,6 +33,22 @@ function EnemyAI.updateNavigation ( )
     --if gingy isn't far from the enemy then the enemy goes into the found State
     if(nAvatarDistance <= 10) then
         
+        --TODO: improve this needs to be improved so every ai doesn't need to have a found sound
+        --for now found sound will be index 1
+        if(this.allowSound ( )) then
+        
+            --gets height of objects
+            local xE, yE, zE = object.getTranslation ( this.hEnemy ( ), object.kGlobalSpace )
+            local xA, yA, zA = object.getTranslation ( this.hAvatar ( ), object.kGlobalSpace )
+            
+            --distance between height is less than certain number play sound
+            if( math.abs(yE - yA) < 4)then
+            
+                sound.play ( this.hEnemy ( ), 1, 1, false, 1 )
+            end
+            
+        end
+        
         this.bSearching( false)
     
     end

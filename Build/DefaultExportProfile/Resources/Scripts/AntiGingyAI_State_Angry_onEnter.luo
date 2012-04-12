@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AntiGingyAI.Angry_onEnter()
+
+
+
+this.setAngry()
+
+
+end

@@ -8,11 +8,16 @@
 function MouseAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
 --------------------------------------------------------------------------------
 	
-	--
-	-- Write your code here, using 'this' as current AI instance.
-	-- This handler is called when a sensor collision occurs.
-	--
-	this.setPunch (  )
+	--detect if avatar is near
+    local sObject = object.getModelName ( hTargetObject )
+    
+    --if gingy set bool to true
+    if(sObject == "gingy") then
+    
+        this.bCollided ( true )
+    
+    end
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

@@ -33,6 +33,22 @@ local nAvatarDistance=object.getDistanceToObject(this.hEnemy(),this.hAvatar())
 
 if(nAvatarDistance<=10)then
 
+
+
+if(this.allowSound())then
+
+
+local xE,yE,zE=object.getTranslation(this.hEnemy(),object.kGlobalSpace)
+local xA,yA,zA=object.getTranslation(this.hAvatar(),object.kGlobalSpace)
+
+
+if(math.abs(yE-yA)<4)then
+
+sound.play(this.hEnemy(),1,1,false,1)
+end
+
+end
+
 this.bSearching(false)
 
 end

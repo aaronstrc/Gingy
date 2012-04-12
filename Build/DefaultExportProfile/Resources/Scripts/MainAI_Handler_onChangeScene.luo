@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+function MainAI.onChangeScene(sSceneName)
+
+
+
+local bScene=application.setCurrentUserScene(sSceneName)
+
+
+if(bScene)then
+
+
+this.sScene(sSceneName)
+
+
+this.hSimpleCamera1(application.getCurrentUserActiveCamera())
+object.addAIModel(this.hSimpleCamera1(),"SimpleCameraAI")
+end
+
+if(this.hSimpleCamera1()~=nil)then
+
+this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
+end
+
+
+end

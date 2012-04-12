@@ -13,5 +13,8 @@ this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
 this.hEnemy(this.getObject())
 
 
+
+
+
 end
 

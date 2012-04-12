@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function collectibleAI.onInit()
+
+
+
+this.hCollectible(this.getObject())
+
+end

@@ -8,8 +8,6 @@
 function MainAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
 
 
-log.warning(nSensorID,hTargetObject,nTargetSensorID)
-
 
 local nAvatarID=sensor.getIDAt(this.hAvatar(),0)
 

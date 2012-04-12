@@ -20,6 +20,10 @@ function AvatarAI.idle_onLoop ( )
         
     end
     
+    --makes the avatar not bobble around
+    local x,y,z = object.getRotation ( this.hAvatar ( ), object.kGlobalSpace )
+    object.setRotation ( this.hAvatar ( ), 0, y, 0, object.kGlobalSpace )
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

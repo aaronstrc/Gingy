@@ -12,9 +12,10 @@ object.sendEvent(this.hSimpleCamera1(),"SimpleCameraAI","onKeyboardKeyDown",kKey
 object.sendEvent(this.hAvatar(),"AvatarAI","onKeyboardKeyDown",kKeyCode)
 
 
+
 if(kKeyCode==input.kKeyEscape)then
 
-scene.setPaused(application.getCurrentUserScene(),false)
+this.setPause()
 
 end
 

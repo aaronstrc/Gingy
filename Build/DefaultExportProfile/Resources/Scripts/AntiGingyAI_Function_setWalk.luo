@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+function AntiGingyAI.setWalk()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hEnemy(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hEnemy(),0,hashtable.get(this.htAnimations(),"walk"))
+
+
+animation.setPlaybackKeyFrameBegin(this.hEnemy(),0,hashtable.get(this.htAnimations(),"walk_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hEnemy(),0,hashtable.get(this.htAnimations(),"walk_end"))
+
+end
+
+
+
+end

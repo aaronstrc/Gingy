@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function TimerAI.onInit()
+
+
+
+this.hTimerObject(this.getObject())
+
+
+end

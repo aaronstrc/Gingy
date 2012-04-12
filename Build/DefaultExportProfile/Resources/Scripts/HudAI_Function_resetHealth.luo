@@ -1,0 +1,30 @@
+
+
+
+
+
+
+
+function HudAI.resetHealth()
+
+
+
+this.nHealthValue(6)
+
+
+local hHealthP=hud.getComponent(application.getCurrentUser(),"gingyLife.health")
+
+
+if(hHealthP~=nil)then
+
+
+hud.setProgressValue(hHealthP,table.getAt(this.tHealth(),this.nHealthValue()))
+
+else
+
+log.warning("Health bar doesn't exist")
+
+end
+
+
+end

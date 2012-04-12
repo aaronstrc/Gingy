@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function HudAI.onSetRespawnPos(x,y,z)
+
+
+
+hashtable.set(this.htRespawn(),"xT",x)
+hashtable.set(this.htRespawn(),"yT",y)
+hashtable.set(this.htRespawn(),"zT",z)
+
+
+end

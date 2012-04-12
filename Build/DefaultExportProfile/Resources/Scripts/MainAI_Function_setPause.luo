@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+function MainAI.setPause()
+
+
+
+if(this.bPaused())then
+
+
+scene.setPaused(application.getCurrentUserScene(),false)
+this.bPaused(false)
+
+else
+
+
+scene.setPaused(application.getCurrentUserScene(),true)
+this.bPaused(true)
+
+end
+
+
+end

@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+function AntiGingyAI.setThrow()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hEnemy(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hEnemy(),0,hashtable.get(this.htAnimations(),"throw"))
+
+
+
+
+
+animation.setPlaybackKeyFrameBegin(this.hEnemy(),0,hashtable.get(this.htAnimations(),"throw_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hEnemy(),0,hashtable.get(this.htAnimations(),"throw_end"))
+
+end
+
+
+
+end

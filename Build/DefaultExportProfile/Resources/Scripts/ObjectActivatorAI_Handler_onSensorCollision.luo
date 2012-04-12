@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+function ObjectActivatorAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+local sOName=object.getModelName(hTargetObject)
+
+if(sOName==this.sAvatar())then
+
+
+local x,y,z=object.getTranslation(this.hActivator(),object.kGlobalSpace)
+
+
+
+local hRunTimeObject=scene.createRuntimeObject(application.getCurrentUserScene(),this.sRunTimeObject())
+
+
+object.setTranslation(hRunTimeObject,x,y,z,object.kGlobalSpace)
+
+
+
+
+sensor.removeAll(this.hActivator())
+
+
+object.setVisible(this.hActivator(),false)
+
+end
+
+
+end

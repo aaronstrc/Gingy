@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AntiGingyAI.FallAndGetup_onEnter()
+
+
+
+this.setFall()
+
+
+end

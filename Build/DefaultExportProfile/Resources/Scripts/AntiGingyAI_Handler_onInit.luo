@@ -1,0 +1,21 @@
+
+
+
+
+
+
+
+function AntiGingyAI.onInit()
+
+
+
+
+this.hAvatar(application.getCurrentUserSceneTaggedObject(this.sAvatar()))
+this.hEnemy(this.getObject())
+
+
+this.setAnimations()
+
+
+end
+

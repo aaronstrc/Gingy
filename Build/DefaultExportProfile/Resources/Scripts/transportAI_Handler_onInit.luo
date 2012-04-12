@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function transportAI.onInit()
+
+
+
+this.hTransObject(this.getObject())
+
+
+end

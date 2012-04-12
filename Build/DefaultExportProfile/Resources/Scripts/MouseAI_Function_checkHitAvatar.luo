@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function MouseAI.checkHitAvatar()
+
+
+
+if(this.bCollided())then
+
+user.sendEvent(application.getCurrentUser(),"HudAI","onDecreaseHealth")
+
+end
+
+
+end

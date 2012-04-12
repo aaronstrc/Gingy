@@ -8,18 +8,18 @@
 function MainAI.onInit()
 
 
-local bScene=application.setCurrentUserScene("Scene1")
+local bScene=application.setCurrentUserScene(this.sScene())
 
 
-if(bScene)then
+
 
 this.hDirectionalLigh1(application.getCurrentUserSceneTaggedObject("DirectionalLight1"))
-this.hSimpleCamera1(application.getCurrentUserSceneTaggedObject("SimpleCamera1"))
+this.hSimpleCamera1(application.getCurrentUserActiveCamera())
 this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
-this.hFlag(application.getCurrentUserSceneTaggedObject("flag"))
+
 application.setCurrentUserActiveCamera(this.hSimpleCamera1())
 
-end
+
 
 end
 

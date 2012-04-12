@@ -26,3 +26,4 @@ object.rotateAxisAngle(this.hEnemy(),0,1,0,180,object.kGlobalSpace)
 end
 
 end
+

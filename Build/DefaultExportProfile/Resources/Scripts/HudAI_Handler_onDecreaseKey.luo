@@ -1,0 +1,38 @@
+
+
+
+
+
+
+
+function HudAI.onDecreaseKey(hUnlockable)
+
+
+
+if(this.nKeys()>0)then
+
+
+local hKeyComponent=hud.getComponent(application.getCurrentUser(),"gingyLife.numKey")
+
+this.nKeys(this.nKeys()-1)
+
+
+if(hUnlockable~=nil)then
+
+object.sendEvent(hUnlockable,"UnlockableAI","onUnlock")
+
+end
+
+
+if(hKeyComponent)then
+
+hud.setLabelText(hKeyComponent,this.nKeys().." x")
+else
+
+log.warning("what are you doing")
+
+end
+
+end
+
+end

@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AntiGingyAI.FallAndGetup_onLeave()
+
+
+
+sensor.setActiveAt(this.hEnemy(),0,true)
+
+
+end

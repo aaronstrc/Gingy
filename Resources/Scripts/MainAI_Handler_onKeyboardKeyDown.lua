@@ -12,10 +12,11 @@ function MainAI.onKeyboardKeyDown ( kKeyCode )
     object.sendEvent ( this.hAvatar(),  "AvatarAI", "onKeyboardKeyDown", kKeyCode )
 
 
-    if(kKeyCode == input.kKeyEscape) then
+    --pauses the game 
+    if(kKeyCode == input.kKeyEscape ) then
     
-        scene.setPaused ( application.getCurrentUserScene ( ), false )
-
+        this.setPause (  )
+        
     end
 
 --------------------------------------------------------------------------------

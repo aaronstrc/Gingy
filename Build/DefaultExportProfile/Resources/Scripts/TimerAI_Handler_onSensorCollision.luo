@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+function TimerAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+local sOName=object.getModelName(hTargetObject)
+
+
+if(sOName==this.sAvatar())then
+
+
+local x,y,z=object.getTranslation(this.hTimerObject(),object.kGlobalSpace)
+
+
+scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hTimerObject())
+
+
+if(this.bAction())then
+
+
+user.sendEvent(application.getCurrentUser(),this.sAIForAction(),this.sAction())
+
+end
+
+
+
+if(this.bDrop())then
+
+
+local hDrop=scene.createRuntimeObject(application.getCurrentUserScene(),this.sDropObject())
+
+
+object.setTranslation(hDrop,x,y,z,object.kGlobalSpace)
+
+end
+
+end
+
+
+end

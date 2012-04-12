@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+function HudAI.onIncreaseHealth()
+
+
+
+
+if(this.nHealthValue()>0 and this.nHealthValue()<6)then
+
+
+this.nHealthValue(this.nHealthValue()+1)
+
+
+local hHealthP=hud.getComponent(application.getCurrentUser(),"gingyLife.health")
+
+
+if(hHealthP~=nil)then
+
+
+hud.setProgressValue(hHealthP,table.getAt(this.tHealth(),this.nHealthValue()))
+
+else
+
+log.warning("Health bar doesn't exist")
+
+end
+
+end
+
+
+end

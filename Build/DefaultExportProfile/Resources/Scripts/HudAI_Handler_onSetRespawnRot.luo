@@ -1,0 +1,17 @@
+
+
+
+
+
+
+
+function HudAI.onSetRespawnRot(x,y,z)
+
+
+
+hashtable.set(this.htRespawn(),"xR",x)
+hashtable.set(this.htRespawn(),"yR",y)
+hashtable.set(this.htRespawn(),"zR",z)
+
+
+end

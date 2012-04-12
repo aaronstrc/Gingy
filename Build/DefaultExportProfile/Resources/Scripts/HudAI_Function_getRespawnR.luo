@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function HudAI.getRespawnR()
+
+
+local x,y,z
+
+
+x=hashtable.get(this.htRespawn(),"xR")
+y=hashtable.get(this.htRespawn(),"yR")
+z=hashtable.get(this.htRespawn(),"zR")
+
+
+return x,y,z
+
+
+end

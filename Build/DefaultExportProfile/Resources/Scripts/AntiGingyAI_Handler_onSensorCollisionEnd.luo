@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+function AntiGingyAI.onSensorCollisionEnd(nSensorID,hTargetObject,nTargetSensorID)
+
+
+local sMTarget=object.getModelName(hTargetObject)
+
+
+if(sMTarget==this.sAvatar())then
+this.bCollided(false)
+end
+
+
+end

@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+function UnlockableAI.onUnlock()
+
+
+
+sensor.removeAll(this.hUnlockable())
+
+
+if(object.hasController(this.hUnlockable(),object.kControllerTypeDynamics))then
+
+
+dynamics.enableDynamics(this.hUnlockable(),false)
+dynamics.enableCollisions(this.hUnlockable(),false)
+dynamics.enableGravity(this.hUnlockable(),false)
+
+end
+
+
+if(this.hAvatar()~=nil)then
+
+
+object.setTranslation(this.hAvatar(),0,0,10,object.kLocalSpace)
+
+
+local x,y,z=object.getTranslation(this.hAvatar(),object.kGlobalSpace)
+local xR,yR,zR=object.getRotation(this.hAvatar(),object.kGlobalSpace)
+
+
+
+
+user.sendEvent(application.getCurrentUser(),"HudAI","onSetRespawnPos",x,y,z)
+user.sendEvent(application.getCurrentUser(),"HudAI","onSetRespawnRot",xR,yR,zR)
+
+end
+
+
+object.setVisible(this.hUnlockable(),false)
+
+
+end

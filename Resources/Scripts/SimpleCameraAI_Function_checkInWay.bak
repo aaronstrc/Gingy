@@ -1,0 +1,50 @@
+--------------------------------------------------------------------------------
+--  Function......... : checkInWay
+--  Author........... : Aaron Stricklin
+--  Description...... : Checks if a object is in the way of the camera
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+function SimpleCameraAI.checkInWay ( )
+--------------------------------------------------------------------------------
+	
+    --gets camera position
+    local x, y, z = object.getTranslation ( this.hSimpleCamera ( ), object.kGlobalSpace )
+    
+    --gets the avatars position
+    local Ax, Ay, Az = object.getTranslation ( this.hAvatar ( ), object.kGlobalSpace )
+    
+	--shoots a ray
+    local hHitObject, nHitDist, nHitSurfaceID = scene.getFirstHitCollider ( application.getCurrentUserScene ( ), x, y, z, Ax, Ay, Az, 10 )
+    
+    --log out what object
+    log.warning ( hHitObject )
+    
+    
+    --keeps if an object is in the way
+    if(hHitObject == nil)then
+    
+        --sets old objects opacity back
+        if(this.hInWayObject ( ) ~= nil)then
+        
+            --changes opacity
+            shape.setMeshOpacity ( this.hInWayObject ( ), 1 )
+            
+            --sets object to nil
+            this.hInWayObject ( nil )
+            
+        
+        end
+        
+    --if not nil set the object see through
+    else
+    
+    
+    
+    end
+    
+    --object.setRotationYPR (  )
+	
+--------------------------------------------------------------------------------
+end
+--------------------------------------------------------------------------------

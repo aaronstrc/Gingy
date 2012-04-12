@@ -15,6 +15,10 @@ function EnemyAI.SearchingAI_onLoop ( )
         this.targetAvatar ( )
     end
     this.updateLook ( )
+    
+    --makes the enemy not bobble around
+    local x,y,z = object.getRotation ( this.hEnemy ( ), object.kGlobalSpace )
+    object.setRotation ( this.hEnemy ( ), 0, y, 0, object.kGlobalSpace )
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

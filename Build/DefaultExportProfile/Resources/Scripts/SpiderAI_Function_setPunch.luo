@@ -1,0 +1,31 @@
+
+
+
+
+
+
+
+function SpiderAI.setPunch()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hSpider(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hSpider(),0,hashtable.get(this.htAnimations(),"punch"))
+
+
+animation.setPlaybackKeyFrameBegin(this.hSpider(),0,hashtable.get(this.htAnimations(),"punch_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hSpider(),0,hashtable.get(this.htAnimations(),"punch_end"))
+
+end
+
+
+end
+

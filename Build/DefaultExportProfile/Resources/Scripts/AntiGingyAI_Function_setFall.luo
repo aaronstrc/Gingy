@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+function AntiGingyAI.setFall()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hEnemy(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hEnemy(),0,hashtable.get(this.htAnimations(),"FallandGetup"))
+
+
+
+
+
+animation.setPlaybackKeyFrameBegin(this.hEnemy(),0,hashtable.get(this.htAnimations(),"FallandGetup_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hEnemy(),0,hashtable.get(this.htAnimations(),"FallandGetup_end"))
+
+
+sensor.setActiveAt(this.hEnemy(),0,false)
+
+end
+
+
+
+end

@@ -10,6 +10,21 @@ function HudAI.onInit (  )
 	--get the user
     local hUser = application.getCurrentUser ( )
     
+    --gets the avatar
+    this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ) )
+    
+    --gets the avatars beginning position for respond
+    local x, y, z = object.getTranslation ( this.hAvatar ( ), object.kGlobalSpace )
+    local xR, yR, zR = object.getRotation ( this.hAvatar ( ), object.kGlobalSpace )
+    
+    --sets the respawn value
+    hashtable.add ( this.htRespawn ( ), "xT", x)
+    hashtable.add ( this.htRespawn ( ), "yT", y)
+    hashtable.add ( this.htRespawn ( ), "zT", z)
+    hashtable.add ( this.htRespawn ( ), "xR", xR)
+    hashtable.add ( this.htRespawn ( ), "yR", yR)
+    hashtable.add ( this.htRespawn ( ), "zR", zR)
+    
     --adds the hud
     local bHud = hud.newTemplateInstance ( hUser, "gingyLife", "gingyLife" )
 	
@@ -37,6 +52,20 @@ function HudAI.onInit (  )
         if(hSprinkleComponent) then
             
             hud.setLabelText ( hSprinkleComponent, this.nSprinkles().." x" )
+        else
+        
+            log.warning ( "what are you doing" )
+        
+        end
+
+
+         --gets the key component
+        local hKeyComponent = hud.getComponent ( hUser, "gingyLife.numKey" ) 
+        
+        --initiates the value of the sprinkle component
+        if(hKeyComponent) then
+            
+            hud.setLabelText ( hKeyComponent, this.nKeys( ).." x" )
         else
         
             log.warning ( "what are you doing" )

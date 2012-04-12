@@ -15,6 +15,8 @@ function MouseAI.onPunch (  )
         
         this.setPunch ( )
         this.bPunch ( true )
+        this.checkHitAvatar ( )
+        
     end
 --------------------------------------------------------------------------------
 end

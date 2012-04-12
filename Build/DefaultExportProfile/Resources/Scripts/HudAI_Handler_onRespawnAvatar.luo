@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+function HudAI.onRespawnAvatar()
+
+
+
+user.sendEvent(application.getCurrentUser(),"HudAI","onDecreaseLife")
+
+
+local x,y,z=this.getRespawnT()
+local xR,yR,zR=this.getRespawnR()
+
+if(this.hAvatar()~=nil)then
+
+
+object.setTranslation(this.hAvatar(),x,y,z,object.kGlobalSpace)
+object.setRotation(this.hAvatar(),xR,yR,zR,object.kGlobalSpace)
+
+else
+
+
+log.warning("NO AVATAR")
+
+end
+
+
+this.resetHealth()
+
+
+end

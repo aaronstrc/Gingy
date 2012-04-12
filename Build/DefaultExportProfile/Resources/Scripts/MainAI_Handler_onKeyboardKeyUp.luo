@@ -9,6 +9,7 @@ function MainAI.onKeyboardKeyUp(kKeyCode)
 
 
 object.sendEvent(this.hSimpleCamera1(),"SimpleCameraAI","onKeyboardKeyUp",kKeyCode)
-
+object.sendEvent(this.hAvatar(),"AvatarAI","onKeyboardKeyUp",kKeyCode)
 
 end
+
