@@ -1,2 +1,22 @@
 This Project contains the file required to run gingy.  A platform game that
 features gingy a gingerbread man.  The Project needs shiva game engine to run.  The current project is using shiva Web edition.
+
+	-CONTROLS-
+W,A,S,D - move gingy 
+
+spaceBar - jump
+
+mouse click - punch
+
+
+- level one objective-
+
+
+The object of the first level is to find a key somewhere in the level and unlock the door above the refrigerator to fight the boss.  
+
+BOSS 1 - AntiGingy
+
+The boss for the first level is an antiGingerbread man.  The boss has two types of attacks punching and throwing a ball. To kill the boss requires a hit count of 25.  When you defeat the boss a flag appears to go to the main lobby of the game.
+
+	-Main Lobby-
+The main lobby is a library that has books that transports your character to different levels.
