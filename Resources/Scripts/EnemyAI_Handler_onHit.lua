@@ -45,6 +45,19 @@ function EnemyAI.onHit (  )
         --then positions runtime to enemies position for special effects
         object.setTranslation ( hRuntime, x, y, z, object.kGlobalSpace )
         
+        --drops an item if bDropItem is set to true
+        if(this.bDropItem ( ) == true)then
+        
+            --creates a runtime object
+            local hDObject = scene.createRuntimeObject ( application.getCurrentUserScene ( ), this.sDropItem ( ) )
+            
+            --then positions runtime to enemies position
+            object.setTranslation ( hDObject, x, y, z, object.kGlobalSpace )
+            
+            --moves it a little back to see the objects
+            object.setTranslation ( hDObject, 0, 0, -3, object.kLocalSpace )
+        
+        end
 
     end
 	

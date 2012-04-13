@@ -46,6 +46,19 @@ local hRuntime=scene.createRuntimeObject(application.getCurrentUserScene(),this.
 object.setTranslation(hRuntime,x,y,z,object.kGlobalSpace)
 
 
+if(this.bDropItem()==true)then
+
+
+local hDObject=scene.createRuntimeObject(application.getCurrentUserScene(),this.sDropItem())
+
+
+object.setTranslation(hDObject,x,y,z,object.kGlobalSpace)
+
+
+object.setTranslation(hDObject,0,0,-3,object.kLocalSpace)
+
+end
+
 end
 
 
