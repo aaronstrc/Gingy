@@ -21,7 +21,7 @@ function TimerAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
         log.warning ( dynamics.getLinearSpeed ( this.hTimerObject ( ) ) )
     
         --checks if need to send an event
-        if(this.bAction ( ) and dynamics.getLinearSpeed ( this.hTimerObject ( ) ) >= 17)then
+        if(this.bAction ( ) and dynamics.getLinearSpeed ( this.hTimerObject ( ) ) >= this.nStopSpeed() )then
         
             --destroys that object
             scene.destroyRuntimeObject ( application.getCurrentUserScene ( ), this.hTimerObject ( ) )

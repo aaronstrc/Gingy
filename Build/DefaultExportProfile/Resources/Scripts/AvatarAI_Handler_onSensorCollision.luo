@@ -7,7 +7,14 @@
 
 function AvatarAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
 
+
+
+if(hTargetObject~=nil)then
+
 local sOName=object.getModelName(hTargetObject)
+
+end
+
 
 if(sOName~="gingy")then
 

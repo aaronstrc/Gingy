@@ -7,8 +7,15 @@
 --------------------------------------------------------------------------------
 function AvatarAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
 --------------------------------------------------------------------------------
-    local sOName = object.getModelName ( hTargetObject )
     
+    --checks to see it target is null
+    if( hTargetObject ~= nil )then
+    
+        local sOName = object.getModelName ( hTargetObject )
+    
+    end
+    
+    --checks if the target was the avatar
     if(sOName ~= "gingy") then
     
         --sets bool for something colliding

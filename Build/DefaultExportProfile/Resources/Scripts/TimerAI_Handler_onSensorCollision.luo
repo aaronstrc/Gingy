@@ -21,7 +21,7 @@ local x,y,z=object.getTranslation(this.hTimerObject(),object.kGlobalSpace)
 log.warning(dynamics.getLinearSpeed(this.hTimerObject()))
 
 
-if(this.bAction()and dynamics.getLinearSpeed(this.hTimerObject())>=17)then
+if(this.bAction()and dynamics.getLinearSpeed(this.hTimerObject())>=this.nStopSpeed())then
 
 
 scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hTimerObject())
