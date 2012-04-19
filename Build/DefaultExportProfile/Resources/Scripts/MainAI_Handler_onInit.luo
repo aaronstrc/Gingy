@@ -11,15 +11,16 @@ function MainAI.onInit()
 local bScene=application.setCurrentUserScene(this.sScene())
 
 
-
+if(bScene)then
 
 this.hDirectionalLigh1(application.getCurrentUserSceneTaggedObject("DirectionalLight1"))
 this.hSimpleCamera1(application.getCurrentUserActiveCamera())
 this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
-
 application.setCurrentUserActiveCamera(this.hSimpleCamera1())
 
+music.play(application.getCurrentUserScene(),0,0)
 
+end
 
 end
 

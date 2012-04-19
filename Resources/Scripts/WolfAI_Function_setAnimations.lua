@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
 --  Function......... : setAnimations
 --  Author........... : Aaron Stricklin
---  Description...... : sets Animations for AntiGingy
+--  Description...... : sets Animations for the wolf
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
@@ -14,33 +14,33 @@ function WolfAI.setAnimations ( )
     --adds hash table that stores animation mode
     --hash table values for idle
     hashtable.add ( this.htAnimations ( ), "idle", 0)
-    hashtable.add ( this.htAnimations ( ), "idle_begin", 3 )
-    hashtable.add ( this.htAnimations ( ), "idle_end", 290 )
+    hashtable.add ( this.htAnimations ( ), "idle_begin", 39 )
+    hashtable.add ( this.htAnimations ( ), "idle_end", 206 )
     
     --hash table values for walk
     hashtable.add ( this.htAnimations ( ), "walk", 1)
-    hashtable.add ( this.htAnimations ( ), "walk_begin", 37 )
-    hashtable.add ( this.htAnimations ( ), "walk_end", 85 )
+    hashtable.add ( this.htAnimations ( ), "walk_begin", 668 )
+    hashtable.add ( this.htAnimations ( ), "walk_end", 760 )
     
     --hash table values for hit
     hashtable.add ( this.htAnimations ( ), "hit", 2)
-    hashtable.add ( this.htAnimations ( ), "hit_begin", 48 )
-    hashtable.add ( this.htAnimations ( ), "hit_end", 119 )
+    hashtable.add ( this.htAnimations ( ), "hit_begin", 19 )
+    hashtable.add ( this.htAnimations ( ), "hit_end", 195 )
     
     --hash table values for angry
     hashtable.add ( this.htAnimations ( ), "angry", 3)
-    hashtable.add ( this.htAnimations ( ), "angry_begin", 43 )
-    hashtable.add ( this.htAnimations ( ), "angry_end", 383 )
+    hashtable.add ( this.htAnimations ( ), "angry_begin", 660 )
+    hashtable.add ( this.htAnimations ( ), "angry_end", 848 )
     
-    --hash table values for jump
-    hashtable.add ( this.htAnimations ( ), "jump", 4)
-    hashtable.add ( this.htAnimations ( ), "jump_begin", 58 )
-    hashtable.add ( this.htAnimations ( ), "jump_end", 190 )
+    --hash table values for run
+    hashtable.add ( this.htAnimations ( ), "run", 4)
+    hashtable.add ( this.htAnimations ( ), "run_begin", 48 )
+    hashtable.add ( this.htAnimations ( ), "run_end", 143 )
     
     --hash table values for getUP
     hashtable.add ( this.htAnimations ( ), "FallandGetup", 5)
-    hashtable.add ( this.htAnimations ( ), "FallandGetup_begin", 1 )
-    hashtable.add ( this.htAnimations ( ), "FallandGetup_end", 289 )
+    hashtable.add ( this.htAnimations ( ), "FallandGetup_begin", 26 )
+    hashtable.add ( this.htAnimations ( ), "FallandGetup_end", 329 )
     
     --hash table values for throw
     hashtable.add ( this.htAnimations ( ), "throw", 6)

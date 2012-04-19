@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function HudAI.onResetAvatar()
+
+
+
+
+this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
+
+
+end

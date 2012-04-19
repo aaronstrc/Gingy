@@ -10,7 +10,7 @@ function HudAI.onDecreaseHealth (  )
 	
     log.message ( "ONDECREASEHEALTH" )
     
-    --plays jump sound
+    --plays punched sound
     sound.play ( this.hAvatar ( ), 1, 3, false, 1 )
     
     --sets new value for the health

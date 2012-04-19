@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+function WolfAI.setHit()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hEnemy(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+
+if(animation.getCurrentClip(this.hEnemy(),0)~=hashtable.get(this.htAnimations(),"hit"))then
+
+animation.setCurrentClip(this.hEnemy(),0,hashtable.get(this.htAnimations(),"hit"))
+
+
+animation.setPlaybackKeyFrameBegin(this.hEnemy(),0,hashtable.get(this.htAnimations(),"hit_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hEnemy(),0,hashtable.get(this.htAnimations(),"hit_end"))
+
+end
+
+end
+
+
+
+end

@@ -11,10 +11,10 @@ function PlatformAI.moveDown()
 if(this.nCount()>0.0)then
 
 
-object.translate(this.hPlatform(),0,-.01,0,object.kLocalSpace)
+object.translate(this.hPlatform(),0,-this.moveInc(),0,object.kLocalSpace)
 
 
-this.nCount(this.nCount()-.1)
+this.nCount(this.nCount()-this.moveInc())
 
 else
 

@@ -20,7 +20,7 @@ function WolfAI.Throwing_onLoop ( )
     --throws an object
     elseif( math.floor ( nPlayCursor) == math.floor ( hashtable.get (this.htAnimations ( ), "throw_release"  ) - 1) and this.bThrown ( ) == false)then
     
-        log.warning ( "ball throw" )
+        --log.warning ( "ball throw" )
         
         --sets the bthrown to true
         this.bThrown ( true )
@@ -39,6 +39,7 @@ function WolfAI.Throwing_onLoop ( )
         
         --sets dynamics
         --adds dynamics
+        dynamics.setAngularVelocity ( hFireball, 3, 0, 0, object.kLocalSpace )
         dynamics.setLinearVelocity ( hFireball, 0, 0, 18, object.kLocalSpace )
         dynamics.addAngularImpulse ( hFireball, 3, 0, 0, object.kLocalSpace  )
         dynamics.addLinearImpulse ( hFireball, 0, 0, 18, object.kLocalSpace )

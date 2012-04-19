@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+function WolfAI.setupNavigation()
+
+
+local hObject=this.getObject()
+
+
+
+if(this.hNavObject()==nil)
+then
+local hScene=object.getScene(hObject)
+if(hScene~=nil)
+then
+local o=scene.createRuntimeObject(hScene,"Dummy")
+if(o~=nil)
+then
+this.hNavObject(o)
+
+this.hNavTarget(scene.createRuntimeObject(hScene,"Dummy"))
+end
+end
+end
+
+
+
+navigation.setNearestNode(this.hNavObject(),hObject)
+
+end
+

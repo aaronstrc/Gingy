@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function SpiderAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+local sObject=object.getModelName(hTargetObject)
+
+
+if(sObject=="gingy")then
+
+this.bCollided(true)
+
+end
+
+
+end
+

@@ -1,0 +1,23 @@
+
+
+
+
+
+
+
+function WolfAI.Hit_onLeave()
+
+
+
+
+if(this.hWeapon()~=nil)then
+
+
+scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hWeapon())
+
+
+this.hWeapon(nil)
+
+end
+
+end

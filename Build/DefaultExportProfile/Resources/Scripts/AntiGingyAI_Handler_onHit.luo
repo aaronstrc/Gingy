@@ -28,6 +28,7 @@ end
 
 else
 
+
 local x,y,z=object.getTranslation(this.hEnemy(),object.kGlobalSpace)
 
 
@@ -35,10 +36,6 @@ local hFlag=scene.createRuntimeObject(application.getCurrentUserScene(),"flag")
 
 
 object.setTranslation(hFlag,x,y,z,object.kGlobalSpace)
-
-
-local x,y,z=object.getTranslation(this.hEnemy(),object.kGlobalSpace)
-
 
 
 local hRuntime=scene.createRuntimeObject(application.getCurrentUserScene(),this.sDeadEffect())

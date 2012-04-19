@@ -49,10 +49,10 @@ function WolfAI.SearchingAI_onLoop ( )
         
             this.Throwing ( )
         
-        --calls jump
+        --calls Run         
         elseif(math.floor ( randomN) == 3 or math.floor ( randomN) == 5  or math.floor ( randomN) == 7) then
         
-            this.Jump ( )
+            this.Run ( )
             
         end
     

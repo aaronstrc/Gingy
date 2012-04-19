@@ -44,7 +44,7 @@ function EnemyAI.updateNavigation ( )
             --distance between height is less than certain number play sound
             if( math.abs(yE - yA) < 4)then
             
-                sound.play ( this.hEnemy ( ), 1, 1, false, 1 )
+                sound.play ( this.hEnemy ( ), 1, 0.5, false, 1 )
             end
             
         end

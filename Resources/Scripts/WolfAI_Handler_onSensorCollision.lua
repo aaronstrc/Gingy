@@ -8,13 +8,16 @@
 function WolfAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
 --------------------------------------------------------------------------------
 	
-    local sMTarget = object.getModelName ( hTargetObject )
+    --throwing weird error with sensor collision hTargetObject equal nul?
+    if(hTargetObject ~= nil)then
     
-	--sets the collided to true
-    if(sMTarget == this.sAvatar ( )) then
-        this.bCollided ( true)
-    end
-	
+        local sMTarget = object.getModelName ( hTargetObject )
+    
+        --sets the collided to true
+        if(sMTarget == this.sAvatar ( )) then
+            this.bCollided ( true)
+        end
+	end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

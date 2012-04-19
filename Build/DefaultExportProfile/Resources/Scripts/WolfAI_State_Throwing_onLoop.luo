@@ -1,0 +1,53 @@
+
+
+
+
+
+
+
+function WolfAI.Throwing_onLoop()
+
+
+
+local nPlayCursor=animation.getPlaybackCursor(this.hEnemy(),0)
+
+
+if(nPlayCursor>=hashtable.get(this.htAnimations(),"throw_end")-1)then
+
+
+this.SearchingAI()
+
+
+elseif(math.floor(nPlayCursor)==math.floor(hashtable.get(this.htAnimations(),"throw_release")-1)and this.bThrown()==false)then
+
+
+
+
+this.bThrown(true)
+
+
+local hFireball=scene.createRuntimeObject(application.getCurrentUserScene(),this.sThrowName())
+
+
+local x,y,z=shape.getSkeletonJointTranslation(this.hEnemy(),"Bip001_R_Hand",object.kGlobalSpace)
+local xR,yR,zR=object.getRotation(this.hEnemy(),object.kGlobalSpace)
+
+
+object.setRotation(hFireball,xR,yR,zR,object.kGlobalSpace)
+object.setTranslation(hFireball,x,y+4,z,object.kGlobalSpace)
+object.setTranslation(hFireball,0,0,3,object.kLocalSpace)
+
+
+
+dynamics.setAngularVelocity(hFireball,3,0,0,object.kLocalSpace)
+dynamics.setLinearVelocity(hFireball,0,0,18,object.kLocalSpace)
+dynamics.addAngularImpulse(hFireball,3,0,0,object.kLocalSpace)
+dynamics.addLinearImpulse(hFireball,0,0,18,object.kLocalSpace)
+
+end
+
+
+local x,y,z=object.getRotation(this.hEnemy(),object.kGlobalSpace)
+object.setRotation(this.hEnemy(),0,y,0,object.kGlobalSpace)
+
+end

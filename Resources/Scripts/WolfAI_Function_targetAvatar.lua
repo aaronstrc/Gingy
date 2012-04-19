@@ -45,7 +45,7 @@ function WolfAI.targetAvatar ( )
         
         --if collided with avatar hit
         if(this.bCollided ( ))then
-            this.setHit ( )
+            this.Hit ( )
         end
     
     elseif(nAvatarDistance >= 13) then

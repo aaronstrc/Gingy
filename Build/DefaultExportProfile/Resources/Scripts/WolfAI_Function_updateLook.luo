@@ -1,0 +1,29 @@
+
+
+
+
+
+
+
+function WolfAI.updateLook()
+
+
+
+
+
+local navLength=navigation.getPathNodeCount(this.hNavObject())
+
+
+if(navLength>=2)then
+
+
+local hNNode=navigation.getPathNodeAt(this.hNavObject(),1)
+
+local x,y,z=navigation.getNodeTranslation(application.getCurrentUserScene(),hNNode)
+
+object.lookAt(this.hEnemy(),x,y,z,object.kGlobalSpace,3)
+object.rotateAxisAngle(this.hEnemy(),0,1,0,180,object.kGlobalSpace)
+end
+
+end
+

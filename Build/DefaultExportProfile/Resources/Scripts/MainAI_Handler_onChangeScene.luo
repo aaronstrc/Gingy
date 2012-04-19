@@ -28,4 +28,10 @@ this.hAvatar(application.getCurrentUserSceneTaggedObject("gingy"))
 end
 
 
+user.sendEvent(application.getCurrentUser(),"HudAI","onResetAvatar")
+
+
+music.play(application.getCurrentUserScene(),0,0)
+
+
 end

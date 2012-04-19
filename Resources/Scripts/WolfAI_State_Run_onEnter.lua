@@ -1,20 +1,20 @@
 --------------------------------------------------------------------------------
---  State............ : Jump
+--  State............ : Run
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function WolfAI.Jump_onEnter ( )
+function WolfAI.Run_onEnter ( )
 --------------------------------------------------------------------------------
 	
-    --sets animation
-    this.setJump ( )
+	--sets animation
+    this.setRun ( )
 	
     --adds dynamics
-    dynamics.setLinearVelocity ( this.hEnemy( ), 0, 10, 13, object.kLocalSpace )
-    dynamics.addLinearImpulse ( this.hEnemy( ), 0, 10, 13, object.kLocalSpace )
-    
+    dynamics.setLinearVelocity ( this.hEnemy( ), 0, 0, 13, object.kLocalSpace )
+    dynamics.addLinearImpulse ( this.hEnemy( ), 0, 0, 13, object.kLocalSpace )
+	
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

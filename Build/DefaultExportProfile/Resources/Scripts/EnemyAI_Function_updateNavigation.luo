@@ -44,7 +44,7 @@ local xA,yA,zA=object.getTranslation(this.hAvatar(),object.kGlobalSpace)
 
 if(math.abs(yE-yA)<4)then
 
-sound.play(this.hEnemy(),1,1,false,1)
+sound.play(this.hEnemy(),1,0.5,false,1)
 end
 
 end

@@ -18,16 +18,16 @@ if(sOName==this.sAvatar())then
 local x,y,z=object.getTranslation(this.hTimerObject(),object.kGlobalSpace)
 
 
+log.warning(dynamics.getLinearSpeed(this.hTimerObject()))
+
+
+if(this.bAction()and dynamics.getLinearSpeed(this.hTimerObject())>=17)then
+
+
 scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hTimerObject())
 
 
-if(this.bAction())then
-
-
 user.sendEvent(application.getCurrentUser(),this.sAIForAction(),this.sAction())
-
-end
-
 
 
 if(this.bDrop())then
@@ -37,6 +37,8 @@ local hDrop=scene.createRuntimeObject(application.getCurrentUserScene(),this.sDr
 
 
 object.setTranslation(hDrop,x,y,z,object.kGlobalSpace)
+
+end
 
 end
 

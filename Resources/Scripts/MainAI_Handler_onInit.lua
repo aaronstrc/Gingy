@@ -11,15 +11,16 @@ function MainAI.onInit (  )
     local bScene = application.setCurrentUserScene ( this.sScene ( ) )
     
     --if the hud is create then create get other objects
-    --if( bScene) then
+    if( bScene) then
     
         this.hDirectionalLigh1 ( application.getCurrentUserSceneTaggedObject ( "DirectionalLight1" ) )
         this.hSimpleCamera1 ( application.getCurrentUserActiveCamera ( ))
         this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
-        --this.hFlag ( application.getCurrentUserSceneTaggedObject ( "flag" ))
         application.setCurrentUserActiveCamera ( this.hSimpleCamera1 ( ) )
     
-    --end
+        music.play ( application.getCurrentUserScene ( ), 0, 0 )
+    
+    end
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

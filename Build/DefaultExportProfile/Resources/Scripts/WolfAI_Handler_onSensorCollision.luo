@@ -1,0 +1,22 @@
+
+
+
+
+
+
+
+function WolfAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+if(hTargetObject~=nil)then
+
+local sMTarget=object.getModelName(hTargetObject)
+
+
+if(sMTarget==this.sAvatar())then
+this.bCollided(true)
+end
+end
+
+end

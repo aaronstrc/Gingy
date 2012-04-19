@@ -28,6 +28,7 @@ function AntiGingyAI.onHit (  )
         
     else
     
+        --gets enemies translation
         local x, y, z = object.getTranslation ( this.hEnemy ( ), object.kGlobalSpace )
         
         --creates a helper object for particle effects
@@ -35,10 +36,6 @@ function AntiGingyAI.onHit (  )
         
         --sets flag position
         object.setTranslation ( hFlag, x, y, z, object.kGlobalSpace )
-        
-         --gets enemies translation
-        local x, y, z = object.getTranslation ( this.hEnemy ( ), object.kGlobalSpace )
-
         
         --creates runtime object for special dying effect
         local hRuntime = scene.createRuntimeObject ( application.getCurrentUserScene ( ), this.sDeadEffect ( ) )

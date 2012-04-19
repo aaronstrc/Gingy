@@ -1,0 +1,34 @@
+
+
+
+
+
+
+
+function SpiderAI.setIdle()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hSpider(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hSpider(),0,hashtable.get(this.htAnimations(),"idle"))
+
+
+
+
+
+animation.setPlaybackKeyFrameBegin(this.hSpider(),0,hashtable.get(this.htAnimations(),"idle_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hSpider(),0,hashtable.get(this.htAnimations(),"idle_end"))
+
+end
+
+
+end
+

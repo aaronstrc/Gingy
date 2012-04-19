@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+function WolfAI.Hit_onEnter()
+
+
+
+this.setHit()
+
+
+this.hWeapon(scene.createRuntimeObject(application.getCurrentUserScene(),this.sWeapon()))
+
+
+local x,y,z=shape.getSkeletonJointTranslation(this.hEnemy(),"Bip001_R_Hand",object.kGlobalSpace)
+local xR,yR,zR=object.getRotation(this.hEnemy(),object.kGlobalSpace)
+
+
+object.setRotation(this.hWeapon(),xR,yR,zR,object.kGlobalSpace)
+object.setTranslation(this.hWeapon(),x,y,z,object.kGlobalSpace)
+
+
+end

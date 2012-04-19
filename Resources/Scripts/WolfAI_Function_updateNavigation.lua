@@ -14,9 +14,9 @@ function WolfAI.updateNavigation ( )
 	-- In a updateNavigation () function
     if(this.bPathFound ( ) == false or nDistance < 0.1 ) then
     
-        navigation.setSpeedLimit ( this.hNavObject(), 5 )
+        navigation.setSpeedLimit ( this.hNavObject(), 3 )
 
-        navigation.setAcceleration ( this.hNavObject ( ), 4 )
+        navigation.setAcceleration ( this.hNavObject ( ), 2 )
 
         navigation.setPathMaxLength ( this.hNavObject ( ), 20 )
 

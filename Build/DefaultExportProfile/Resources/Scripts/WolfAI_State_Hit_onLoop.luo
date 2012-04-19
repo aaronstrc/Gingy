@@ -1,0 +1,39 @@
+
+
+
+
+
+
+
+function WolfAI.Hit_onLoop()
+
+
+
+if(this.hWeapon()~=nil)then
+
+
+
+local x,y,z=shape.getSkeletonJointTranslation(this.hEnemy(),"Bip001_R_Hand",object.kGlobalSpace)
+local xR,yR,zR=shape.getSkeletonJointRotation(this.hEnemy(),"Bip001_R_Hand",object.kGlobalSpace)
+
+
+object.setRotation(this.hWeapon(),xR,yR,zR,object.kGlobalSpace)
+object.setTranslation(this.hWeapon(),x,y,z,object.kGlobalSpace)
+object.setRotation(this.hWeapon(),90,0,0,object.kLocalSpace)
+
+end
+
+
+if(animation.getPlaybackCursor(this.hEnemy(),0)>=hashtable.get(this.htAnimations(),"hit_end")-1)then
+
+
+this.SearchingAI()
+
+end
+
+
+local x,y,z=object.getRotation(this.hEnemy(),object.kGlobalSpace)
+object.setRotation(this.hEnemy(),0,y,0,object.kGlobalSpace)
+
+
+end

@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+function SpiderAI.idle_onLoop()
+
+
+
+if(this.bPunch()==true and animation.getPlaybackCursor(this.hSpider(),0)>=hashtable.get(this.htAnimations(),"punch_end")-1)then
+this.bPunch(false)
+this.setIdle()
+end
+
+end
+

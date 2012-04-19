@@ -17,7 +17,14 @@ if(kKeyCode==input.kKeyEscape)then
 
 this.setPause()
 
+
+elseif(kKeyCode==input.kKeyF1)then
+
+application.quit()
+
 end
+
+
 
 
 end

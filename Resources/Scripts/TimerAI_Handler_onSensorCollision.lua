@@ -17,26 +17,28 @@ function TimerAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
         --gets objects translation
         local x, y, z = object.getTranslation ( this.hTimerObject ( ), object.kGlobalSpace )
     
-        --destroys that object
-        scene.destroyRuntimeObject ( application.getCurrentUserScene ( ), this.hTimerObject ( ) )
+    
+        log.warning ( dynamics.getLinearSpeed ( this.hTimerObject ( ) ) )
     
         --checks if need to send an event
-        if(this.bAction ( ))then
+        if(this.bAction ( ) and dynamics.getLinearSpeed ( this.hTimerObject ( ) ) >= 17)then
+        
+            --destroys that object
+            scene.destroyRuntimeObject ( application.getCurrentUserScene ( ), this.hTimerObject ( ) )
         
             --sends event
             user.sendEvent ( application.getCurrentUser ( ), this.sAIForAction ( ), this.sAction ( ) )
         
-        end
+            --checks if need to drop something
+            if( this.bDrop ( ) )then
         
-    
-        --checks if need to drop something
-        if( this.bDrop ( ) )then
-        
-            --creates drop object
-            local hDrop =  scene.createRuntimeObject ( application.getCurrentUserScene ( ), this.sDropObject ( ) )
+                --creates drop object
+                local hDrop =  scene.createRuntimeObject ( application.getCurrentUserScene ( ), this.sDropObject ( ) )
             
-            --sets new translation
-            object.setTranslation ( hDrop, x, y, z, object.kGlobalSpace )
+                --sets new translation
+                object.setTranslation ( hDrop, x, y, z, object.kGlobalSpace )
+        
+            end
         
         end
 	

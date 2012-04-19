@@ -27,6 +27,12 @@ function MainAI.onChangeScene ( sSceneName )
         this.hAvatar ( application.getCurrentUserSceneTaggedObject ( "gingy" ))
     end
     
+    --sends message to the hud to reset gingy
+    user.sendEvent ( application.getCurrentUser ( ), "HudAI", "onResetAvatar" )
+    
+    --plays scene music
+    music.play ( application.getCurrentUserScene ( ), 0, 0 )
+    
 --------------------------------------------------------------------------------
 end
 --------------------------------------------------------------------------------

@@ -1,0 +1,69 @@
+
+
+
+
+
+
+
+function WolfAI.SearchingAI_onLoop()
+
+
+
+local nCTime=system.getTimeOfDay()-this.nIdleStartTime()
+
+
+if(nCTime<this.nStateTime())then
+
+
+if(this.bSearching()==true)then
+this.updateNavigation()
+else
+this.targetAvatar()
+end
+
+
+else
+
+
+this.nStateTime(math.random(5,15))
+
+
+this.nIdleStartTime(0)
+
+
+local randomN=math.random(0,7)
+
+
+
+if(math.floor(randomN)==0)then
+
+this.Idle()
+
+
+elseif(math.floor(randomN)==1)then
+
+this.Angry()
+
+
+elseif(math.floor(randomN)==2 or math.floor(randomN)==4 or math.floor(randomN)==6)then
+
+this.Throwing()
+
+
+elseif(math.floor(randomN)==3 or math.floor(randomN)==5 or math.floor(randomN)==7)then
+
+this.Run()
+
+end
+
+end
+
+
+this.updateLook()
+
+
+local x,y,z=object.getRotation(this.hEnemy(),object.kGlobalSpace)
+object.setRotation(this.hEnemy(),0,y,0,object.kGlobalSpace)
+
+end
+

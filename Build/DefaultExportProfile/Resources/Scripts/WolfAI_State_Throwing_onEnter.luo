@@ -1,0 +1,24 @@
+
+
+
+
+
+
+
+function WolfAI.Throwing_onEnter()
+
+
+
+this.setThrow()
+
+
+local x,y,z=object.getTranslation(this.hAvatar(),object.kGlobalSpace)
+
+
+object.lookAt(this.hEnemy(),x,y,z,object.kGlobalSpace,1)
+
+
+object.setRotation(this.hEnemy(),0,180,0,object.kLocalSpace)
+
+
+end
