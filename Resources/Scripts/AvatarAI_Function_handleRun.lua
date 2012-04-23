@@ -21,11 +21,26 @@ function AvatarAI.handleRun ( )
         --sets punch
         elseif(this.bPunch ( ) == true) then
             
-            --if the punch sequence has ended set this.bPunch ( ) to false
-            if( animation.getPlaybackCursor ( this.hAvatar ( ), 0 ) >= hashtable.get (this.htAnimations ( ), "punch_end"  ) - 1) then
-                this.bPunch ( false )
+            --checks if the weapon is set
+            if(this.bWeapon ( ) == false)then
+            
+                --if the punch sequence has ended set this.bPunch ( ) to false
+                if( animation.getPlaybackCursor ( this.hAvatar ( ), 0 ) >= hashtable.get (this.htAnimations ( ), "punch_end"  ) - 1) then
+                    this.bPunch ( false )
+                else
+                    this.setPunch (  )
+                end
+                
             else
-                this.setPunch (  )
+                
+                --if the punch sequence has ended set this.bPunch ( ) to false
+                if( animation.getPlaybackCursor ( this.hAvatar ( ), 0 ) >= hashtable.get (this.htAnimations ( ), "smallWeapon_end"  ) - 1) then
+                    this.bPunch ( false )
+                    this.bWeaponActive ( false )
+                else
+                    this.setSmalWeaponS (  )
+                end
+        
             end
         
         --sets run

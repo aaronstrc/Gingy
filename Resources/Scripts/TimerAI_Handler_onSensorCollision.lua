@@ -13,15 +13,12 @@ function TimerAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
     
     --checks if avatar
     if(sOName == this.sAvatar ( )) then
-	
-        --gets objects translation
-        local x, y, z = object.getTranslation ( this.hTimerObject ( ), object.kGlobalSpace )
-    
-    
-        log.warning ( dynamics.getLinearSpeed ( this.hTimerObject ( ) ) )
     
         --checks if need to send an event
         if(this.bAction ( ) and dynamics.getLinearSpeed ( this.hTimerObject ( ) ) >= this.nStopSpeed() )then
+        
+            --gets objects translation
+            local x, y, z = object.getTranslation ( this.hTimerObject ( ), object.kGlobalSpace )
         
             --destroys that object
             scene.destroyRuntimeObject ( application.getCurrentUserScene ( ), this.hTimerObject ( ) )

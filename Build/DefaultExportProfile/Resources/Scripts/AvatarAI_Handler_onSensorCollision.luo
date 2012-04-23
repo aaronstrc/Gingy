@@ -9,11 +9,9 @@ function AvatarAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
 
 
 
-if(hTargetObject~=nil)then
+if(hTargetObject~=nil and hTargetObject~=this.hWeapon())then
 
 local sOName=object.getModelName(hTargetObject)
-
-end
 
 
 if(sOName~="gingy")then
@@ -23,6 +21,8 @@ if(sOName~="gingy")then
 
 this.bCollided(true)
 this.hCollided(hTargetObject)
+
+end
 
 end
 

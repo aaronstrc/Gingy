@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+function WeaponAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
+
+
+
+local sOName=object.getModelName(hTargetObject)
+
+
+if(sOName~=this.sUser()and this.bCollided()==false)then
+
+
+local nAiModels=object.getAIModelCount(hTargetObject)
+
+
+for i=0,nAiModels-1,1 do
+
+
+local sAiName=object.getAIModelNameAt(hTargetObject,i)
+
+local bOnHit=object.hasAIEventHandler(hTargetObject,sAiName,"onHit")
+
+
+if(bOnHit)then
+
+
+object.sendEvent(hTargetObject,sAiName,"onHit")
+
+end
+end
+
+end
+
+
+end

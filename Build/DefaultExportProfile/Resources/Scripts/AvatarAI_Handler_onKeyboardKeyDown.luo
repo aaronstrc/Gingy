@@ -23,6 +23,43 @@ this.nHandlerCount(this.nHandlerCount()+1)
 end
 
 
+
+if(kKeyCode==input.kKeyE)then
+
+
+if(this.bWeapon()==false)then
+
+
+this.bWeapon(true)
+
+
+this.hWeapon(scene.createRuntimeObject(application.getCurrentUserScene(),this.sWeapon()))
+
+
+local xWT,yWT,zWT=shape.getSkeletonJointTranslation(this.hAvatar(),this.sHandHWeapon(),object.kGlobalSpace)
+local xWR,yWR,zWR=shape.getSkeletonJointRotation(this.hAvatar(),this.sHandHWeapon(),object.kGlobalSpace)
+object.setTranslation(this.hWeapon(),xWT,yWT,zWT,object.kGlobalSpace)
+object.setRotation(this.hWeapon(),xWR,yWR,zWR,object.kGlobalSpace)
+
+
+
+else
+
+
+this.bWeapon(false)
+
+
+scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hWeapon())
+
+
+this.hWeapon(nil)
+
+end
+
+end
+
+
+
 if(kKeyCode==input.kKeySpace)then
 
 

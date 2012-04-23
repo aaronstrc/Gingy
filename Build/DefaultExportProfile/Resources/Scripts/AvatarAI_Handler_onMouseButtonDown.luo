@@ -16,6 +16,9 @@ this.bPunch(true)
 if(this.bCollided())then
 
 
+if(this.bWeapon()==false)then
+
+
 local nAiModels=object.getAIModelCount(this.hCollided())
 
 
@@ -33,6 +36,9 @@ if(bOnHit)then
 object.sendEvent(this.hCollided(),sAiName,"onHit")
 
 end
+end
+
+
 end
 end
 

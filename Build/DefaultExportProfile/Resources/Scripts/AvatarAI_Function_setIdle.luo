@@ -18,8 +18,7 @@ if(hasAnimation==true)then
 
 animation.setCurrentClip(this.hAvatar(),0,hashtable.get(this.htAnimations(),"idle"))
 
-
-
+animation.setPlaybackSpeed(this.hAvatar(),0,60)
 
 
 animation.setPlaybackKeyFrameBegin(this.hAvatar(),0,hashtable.get(this.htAnimations(),"idle_begin"))

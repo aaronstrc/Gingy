@@ -15,13 +15,10 @@ local sOName=object.getModelName(hTargetObject)
 if(sOName==this.sAvatar())then
 
 
-local x,y,z=object.getTranslation(this.hTimerObject(),object.kGlobalSpace)
-
-
-log.warning(dynamics.getLinearSpeed(this.hTimerObject()))
-
-
 if(this.bAction()and dynamics.getLinearSpeed(this.hTimerObject())>=this.nStopSpeed())then
+
+
+local x,y,z=object.getTranslation(this.hTimerObject(),object.kGlobalSpace)
 
 
 scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hTimerObject())

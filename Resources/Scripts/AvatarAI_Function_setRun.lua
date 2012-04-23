@@ -19,6 +19,8 @@ function AvatarAI.setRun ( )
         --sets the current clip to run
         animation.setCurrentClip ( this.hAvatar ( ), 0, hashtable.get( this.htAnimations ( ), "run" ) )
         
+        animation.setPlaybackSpeed ( this.hAvatar ( ), 0, 60 )
+        
         --sets blending for the animations (allows smooth animations)
         --animation.setPlaybackBlendMode ( this.hAvatar ( ), 0, animation.kPlaybackBlendModeAdditive)
         

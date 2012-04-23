@@ -18,8 +18,7 @@ function AvatarAI.setIdle ( )
     
         animation.setCurrentClip ( this.hAvatar ( ), 0,  hashtable.get ( this.htAnimations ( ), "idle") )
         
-        --sets blending for the animations (allows smooth animations)
-        --animation.setPlaybackBlendMode ( this.hAvatar ( ), 0, animation.kPlaybackModeLoop)
+        animation.setPlaybackSpeed ( this.hAvatar ( ), 0, 60 )
         
         --edits the run clip to the correct beginning frame
         animation.setPlaybackKeyFrameBegin ( this.hAvatar ( ), 0, hashtable.get( this.htAnimations ( ), "idle_begin" ) )

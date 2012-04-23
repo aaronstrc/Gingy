@@ -21,6 +21,23 @@ this.handleIdle()
 end
 
 
+
+if(this.bWeapon()==true and this.bWeaponActive()==false)then
+
+
+local xWT,yWT,zWT=shape.getSkeletonJointTranslation(this.hAvatar(),this.sRestBone(),object.kGlobalSpace)
+local xWR,yWR,zWR=shape.getSkeletonJointRotation(this.hAvatar(),this.sRestBone(),object.kGlobalSpace)
+
+
+object.setTranslation(this.hWeapon(),xWT,yWT,zWT,object.kGlobalSpace)
+object.setRotation(this.hWeapon(),xWR,yWR,zWR,object.kGlobalSpace)
+object.setTranslation(this.hWeapon(),0,0,-0.6,object.kLocalSpace)
+object.setRotation(this.hWeapon(),90,0,0,object.kLocalSpace)
+
+
+end
+
+
 local x,y,z=object.getRotation(this.hAvatar(),object.kGlobalSpace)
 object.setRotation(this.hAvatar(),0,y,0,object.kGlobalSpace)
 

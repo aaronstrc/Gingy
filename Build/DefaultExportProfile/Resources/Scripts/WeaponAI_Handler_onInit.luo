@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function WeaponAI.onInit()
+
+
+
+this.hWeapon(this.getObject())
+
+
+end

@@ -22,10 +22,25 @@ end
 elseif(this.bPunch()==true)then
 
 
+if(this.bWeapon()==false)then
+
+
 if(animation.getPlaybackCursor(this.hAvatar(),0)>=hashtable.get(this.htAnimations(),"punch_end")-1)then
 this.bPunch(false)
 else
 this.setPunch()
+end
+
+else
+
+
+if(animation.getPlaybackCursor(this.hAvatar(),0)>=hashtable.get(this.htAnimations(),"smallWeapon_end")-1)then
+this.bPunch(false)
+this.bWeaponActive(false)
+else
+this.setSmalWeaponS()
+end
+
 end
 
 

@@ -18,6 +18,8 @@ if(hasAnimation==true)then
 
 animation.setCurrentClip(this.hAvatar(),0,hashtable.get(this.htAnimations(),"jump"))
 
+animation.setPlaybackSpeed(this.hAvatar(),0,60)
+
 
 
 

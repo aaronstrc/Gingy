@@ -19,6 +19,8 @@ if(hasAnimation==true)then
 
 animation.setCurrentClip(this.hAvatar(),0,hashtable.get(this.htAnimations(),"run"))
 
+animation.setPlaybackSpeed(this.hAvatar(),0,60)
+
 
 
 

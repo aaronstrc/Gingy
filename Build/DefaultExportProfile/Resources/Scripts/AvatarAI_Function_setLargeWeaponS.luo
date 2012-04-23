@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+function AvatarAI.setLargeWeaponS()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hAvatar(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hAvatar(),0,hashtable.get(this.htAnimations(),"largeWeapon"))
+
+
+animation.setPlaybackSpeed(this.hAvatar(),0,100)
+
+
+animation.setPlaybackKeyFrameBegin(this.hAvatar(),0,hashtable.get(this.htAnimations(),"largeWeapon_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hAvatar(),0,hashtable.get(this.htAnimations(),"largeWeapon_end"))
+
+end
+
+end

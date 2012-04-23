@@ -1,0 +1,14 @@
+
+
+
+
+
+
+
+function WeaponAI.onSensorCollisionEnd(nSensorID,hTargetObject,nTargetSensorID)
+
+
+this.bCollided(false)
+
+
+end

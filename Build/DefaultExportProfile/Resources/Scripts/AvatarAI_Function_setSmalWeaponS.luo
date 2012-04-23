@@ -1,0 +1,42 @@
+
+
+
+
+
+
+
+function AvatarAI.setSmalWeaponS()
+
+
+
+
+
+local hasAnimation=object.hasController(this.hAvatar(),object.kControllerTypeAnimation)
+
+
+if(hasAnimation==true)then
+
+animation.setCurrentClip(this.hAvatar(),0,hashtable.get(this.htAnimations(),"smallWeapon"))
+
+
+animation.setPlaybackSpeed(this.hAvatar(),0,100)
+
+
+animation.setPlaybackKeyFrameBegin(this.hAvatar(),0,hashtable.get(this.htAnimations(),"smallWeapon_begin"))
+
+
+animation.setPlaybackKeyFrameEnd(this.hAvatar(),0,hashtable.get(this.htAnimations(),"smallWeapon_end"))
+
+
+local xWT,yWT,zWT=shape.getSkeletonJointTranslation(this.hAvatar(),this.sHandHWeapon(),object.kGlobalSpace)
+local xWR,yWR,zWR=shape.getSkeletonJointRotation(this.hAvatar(),this.sHandHWeapon(),object.kGlobalSpace)
+object.setTranslation(this.hWeapon(),xWT,yWT,zWT,object.kGlobalSpace)
+object.setRotation(this.hWeapon(),xWR,yWR,zWR,object.kGlobalSpace)
+object.setRotation(this.hWeapon(),90,0,190,object.kLocalSpace)
+
+this.bWeaponActive(true)
+
+end
+
+
+end

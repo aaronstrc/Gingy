@@ -15,25 +15,31 @@ function AvatarAI.onMouseButtonDown ( nButton, nPointX, nPointY, nRayPntX, nRayP
     --send and even to the enemy if exist
     if( this.bCollided ( )) then
         
-        --gets number of aimodels
-        local nAiModels = object.getAIModelCount ( this.hCollided ( ) )
+        --if weapons equipped let the weapon handle the hits 
+        if(this.bWeapon() == false) then
         
-        --loops through the aimodels
-        for i = 0, nAiModels - 1, 1 do
+            --gets number of aimodels
+            local nAiModels = object.getAIModelCount ( this.hCollided ( ) )
         
-            --gets aimodels name
-            local sAiName = object.getAIModelNameAt( this.hCollided ( ), i)
+            --loops through the aimodels
+            for i = 0, nAiModels - 1, 1 do
         
-            local bOnHit = object.hasAIEventHandler ( this.hCollided ( ), sAiName, "onHit"  )
+                --gets aimodels name
+                local sAiName = object.getAIModelNameAt( this.hCollided ( ), i)
         
-            --if it has handler send message to it
-            if(bOnHit)then
+                local bOnHit = object.hasAIEventHandler ( this.hCollided ( ), sAiName, "onHit"  )
+        
+                --if it has handler send message to it
+                if(bOnHit)then
             
-                --sends an event to enemy
-                object.sendEvent ( this.hCollided ( ), sAiName, "onHit" )
+                    --sends an event to enemy
+                    object.sendEvent ( this.hCollided ( ), sAiName, "onHit" )
             
+                end
             end
-        end    
+            
+        --end weapon
+        end 
     end
 	
 --------------------------------------------------------------------------------

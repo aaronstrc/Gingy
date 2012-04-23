@@ -18,6 +18,8 @@ function AvatarAI.setJump ( )
     
         animation.setCurrentClip ( this.hAvatar ( ), 0, hashtable.get ( this.htAnimations ( ), "jump") )
         
+        animation.setPlaybackSpeed ( this.hAvatar ( ), 0, 60 )
+        
         --sets the right keys frames
         --if this.nHandlerCount ( ) is greater than zero then running and jump
         --so different key frames
