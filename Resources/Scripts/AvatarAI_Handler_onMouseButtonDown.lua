@@ -36,6 +36,7 @@ function AvatarAI.onMouseButtonDown ( nButton, nPointX, nPointY, nRayPntX, nRayP
                     object.sendEvent ( this.hCollided ( ), sAiName, "onHit" )
             
                 end
+            
             end
             
         --end weapon

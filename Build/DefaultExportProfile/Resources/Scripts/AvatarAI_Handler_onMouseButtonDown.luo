@@ -36,6 +36,7 @@ if(bOnHit)then
 object.sendEvent(this.hCollided(),sAiName,"onHit")
 
 end
+
 end
 
 
