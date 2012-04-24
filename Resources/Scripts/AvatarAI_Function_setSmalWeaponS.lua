@@ -36,6 +36,11 @@ function AvatarAI.setSmalWeaponS ( )
         
         this.bWeaponActive ( true )
         
+        --sends event that the weapon is active
+        if(this.hWeapon ( ) ~= nil)then
+            object.sendEvent ( this.hWeapon ( ), "WeaponAI", "onSwingActivate" )
+        end
+        
     end
 	
 --------------------------------------------------------------------------------

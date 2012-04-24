@@ -32,9 +32,14 @@ local xWT,yWT,zWT=shape.getSkeletonJointTranslation(this.hAvatar(),this.sHandHWe
 local xWR,yWR,zWR=shape.getSkeletonJointRotation(this.hAvatar(),this.sHandHWeapon(),object.kGlobalSpace)
 object.setTranslation(this.hWeapon(),xWT,yWT,zWT,object.kGlobalSpace)
 object.setRotation(this.hWeapon(),xWR,yWR,zWR,object.kGlobalSpace)
-object.setRotation(this.hWeapon(),90,0,190,object.kLocalSpace)
+object.setRotation(this.hWeapon(),90,0,200,object.kLocalSpace)
 
 this.bWeaponActive(true)
+
+
+if(this.hWeapon()~=nil)then
+object.sendEvent(this.hWeapon(),"WeaponAI","onSwingActivate")
+end
 
 end
 

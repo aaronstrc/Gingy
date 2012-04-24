@@ -12,7 +12,7 @@ function WeaponAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID 
     local sOName = object.getModelName ( hTargetObject )
     
     --checks if avatar
-    if(sOName ~= this.sUser( ) and this.bCollided ( ) == false) then
+    if(sOName ~= this.sUser( ) and this.bCollided ( ) == false and this.bSwingActivated ( ) == true) then
     
         --gets number of aimodels
         local nAiModels = object.getAIModelCount ( hTargetObject )

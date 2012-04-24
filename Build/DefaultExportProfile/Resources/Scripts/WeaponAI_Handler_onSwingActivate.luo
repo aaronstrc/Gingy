@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function WeaponAI.onSwingActivate()
+
+
+
+this.bSwingActivated(true)
+
+
+end

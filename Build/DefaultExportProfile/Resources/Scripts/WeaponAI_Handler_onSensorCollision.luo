@@ -12,7 +12,7 @@ function WeaponAI.onSensorCollision(nSensorID,hTargetObject,nTargetSensorID)
 local sOName=object.getModelName(hTargetObject)
 
 
-if(sOName~=this.sUser()and this.bCollided()==false)then
+if(sOName~=this.sUser()and this.bCollided()==false and this.bSwingActivated()==true)then
 
 
 local nAiModels=object.getAIModelCount(hTargetObject)

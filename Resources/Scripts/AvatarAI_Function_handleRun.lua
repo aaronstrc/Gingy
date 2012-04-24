@@ -37,6 +37,12 @@ function AvatarAI.handleRun ( )
                 if( animation.getPlaybackCursor ( this.hAvatar ( ), 0 ) >= hashtable.get (this.htAnimations ( ), "smallWeapon_end"  ) - 1) then
                     this.bPunch ( false )
                     this.bWeaponActive ( false )
+                    
+                    --sends event that the weapon is active
+                    if(this.hWeapon ( ) ~= nil)then
+                        object.sendEvent ( this.hWeapon ( ), "WeaponAI", "onSwingEnactivate" )
+                    end
+                    
                 else
                     this.setSmalWeaponS (  )
                 end

@@ -38,6 +38,11 @@ function AvatarAI.handleIdle ( )
                     
                     this.bPunch ( false )
                     this.bWeaponActive ( false )
+                    
+                    --sends event that the weapon is active
+                    if(this.hWeapon ( ) ~= nil)then
+                        object.sendEvent ( this.hWeapon ( ), "WeaponAI", "onSwingEnactivate" )
+                    end
                 
                 else
                     
