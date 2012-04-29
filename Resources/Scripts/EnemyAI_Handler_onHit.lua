@@ -55,7 +55,7 @@ function EnemyAI.onHit (  )
             object.setTranslation ( hDObject, x, y, z, object.kGlobalSpace )
             
             --moves it a little back to see the objects
-            object.setTranslation ( hDObject, 0, 0, -3, object.kLocalSpace )
+            object.setTranslation ( hDObject, 0, 3, -3, object.kLocalSpace )
         
         end
 

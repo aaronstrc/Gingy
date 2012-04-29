@@ -74,6 +74,8 @@ hObject,nDist,nHitSurfID=scene.getFirstHitTerrainChunk(application.getCurrentUse
 
 end
 
+log.warning(hObject)
+
 
 if(nDist<=0.2)and(this.bJump()==false)then
 

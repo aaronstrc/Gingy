@@ -55,7 +55,7 @@ local hDObject=scene.createRuntimeObject(application.getCurrentUserScene(),this.
 object.setTranslation(hDObject,x,y,z,object.kGlobalSpace)
 
 
-object.setTranslation(hDObject,0,0,-3,object.kLocalSpace)
+object.setTranslation(hDObject,0,3,-3,object.kLocalSpace)
 
 end
 
@@ -63,3 +63,4 @@ end
 
 
 end
+
