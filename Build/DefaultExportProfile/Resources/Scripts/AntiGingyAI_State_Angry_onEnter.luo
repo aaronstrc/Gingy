@@ -12,4 +12,8 @@ function AntiGingyAI.Angry_onEnter()
 this.setAngry()
 
 
+sound.play(this.hEnemy(),1,0.2,false,0)
+
+
 end
+

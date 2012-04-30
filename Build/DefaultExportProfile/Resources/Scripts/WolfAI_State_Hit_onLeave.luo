@@ -13,6 +13,9 @@ function WolfAI.Hit_onLeave()
 if(this.hWeapon()~=nil)then
 
 
+object.sendEvent(this.hWeapon(),"WeaponAI","onSwingEnactivate")
+
+
 scene.destroyRuntimeObject(application.getCurrentUserScene(),this.hWeapon())
 
 
@@ -21,3 +24,4 @@ this.hWeapon(nil)
 end
 
 end
+

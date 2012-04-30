@@ -1,11 +1,11 @@
 --------------------------------------------------------------------------------
---  Handler.......... : onSensorCollision
+--  Handler.......... : onSensorCollisionBegin
 --  Author........... : 
 --  Description...... : 
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
-function WeaponAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID )
+function WeaponAI.onSensorCollisionBegin ( nSensorID, hTargetObject, nTargetSensorID )
 --------------------------------------------------------------------------------
 	
 	--gets the collided models name
@@ -28,13 +28,21 @@ function WeaponAI.onSensorCollision ( nSensorID, hTargetObject, nTargetSensorID 
             --if it has handler send message to it
             if(bOnHit)then
             
-                --sends an event to enemy
-                object.sendEvent ( hTargetObject, sAiName, "onHit" )
+                --weapons can change amount of damage they do
+                for j = 0, this.nHits(), 1 do
+            
+                    --sends an event to enemy
+                    object.sendEvent ( hTargetObject, sAiName, "onHit" )
+            
+                end
             
             end
         end
+        
+        --this.bSwingActivated ( false )
 	
     end
+	
 	
 --------------------------------------------------------------------------------
 end

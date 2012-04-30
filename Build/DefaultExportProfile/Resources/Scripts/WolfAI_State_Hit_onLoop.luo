@@ -13,13 +13,17 @@ if(this.hWeapon()~=nil)then
 
 
 
+object.sendEvent(this.hWeapon(),"WeaponAI","onSwingActivate")
+
+
+
 local x,y,z=shape.getSkeletonJointTranslation(this.hEnemy(),"Bip001_R_Hand",object.kGlobalSpace)
 local xR,yR,zR=shape.getSkeletonJointRotation(this.hEnemy(),"Bip001_R_Hand",object.kGlobalSpace)
 
 
 object.setRotation(this.hWeapon(),xR,yR,zR,object.kGlobalSpace)
 object.setTranslation(this.hWeapon(),x,y,z,object.kGlobalSpace)
-object.setRotation(this.hWeapon(),90,0,0,object.kLocalSpace)
+object.setRotation(this.hWeapon(),90,0,-70,object.kLocalSpace)
 
 end
 
@@ -37,3 +41,4 @@ object.setRotation(this.hEnemy(),0,y,0,object.kGlobalSpace)
 
 
 end
+

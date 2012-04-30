@@ -9,12 +9,14 @@ function AntiGingyAI.onInit()
 
 
 
-
 this.hAvatar(application.getCurrentUserSceneTaggedObject(this.sAvatar()))
 this.hEnemy(this.getObject())
 
 
 this.setAnimations()
+
+
+sound.play(this.hEnemy(),1,0.2,false,0)
 
 
 end

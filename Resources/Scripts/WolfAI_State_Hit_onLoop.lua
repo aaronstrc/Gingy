@@ -11,6 +11,10 @@ function WolfAI.Hit_onLoop ( )
     --sometimes weapon removes itself while the loop hasn't finished or its not being created.
     if(this.hWeapon ( ) ~= nil)then
     
+    
+        --sends event to the weapon
+        object.sendEvent ( this.hWeapon ( ), "WeaponAI", "onSwingActivate" )
+    
         --NOTE:The weapon the wolf uses will send hit to the avatar
         --gets this enemies translation
         local x, y, z = shape.getSkeletonJointTranslation ( this.hEnemy ( ), "Bip001_R_Hand", object.kGlobalSpace )
@@ -19,7 +23,7 @@ function WolfAI.Hit_onLoop ( )
         --sets objects new position and rotation
         object.setRotation ( this.hWeapon(), xR, yR, zR, object.kGlobalSpace )
         object.setTranslation ( this.hWeapon(), x, y, z, object.kGlobalSpace )
-        object.setRotation ( this.hWeapon ( ), 90, 0, 0, object.kLocalSpace )
+        object.setRotation ( this.hWeapon ( ), 90, 0, -70, object.kLocalSpace )
 
     end
     

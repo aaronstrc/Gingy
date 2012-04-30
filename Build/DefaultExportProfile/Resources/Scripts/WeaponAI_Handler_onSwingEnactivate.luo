@@ -1,0 +1,16 @@
+
+
+
+
+
+
+
+function WeaponAI.onSwingEnactivate()
+
+
+
+this.bSwingActivated(false)
+
+
+end
+

@@ -24,3 +24,4 @@ object.setTranslation(this.hWeapon(),x,y,z,object.kGlobalSpace)
 
 
 end
+

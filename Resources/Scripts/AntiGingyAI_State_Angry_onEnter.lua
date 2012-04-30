@@ -10,6 +10,9 @@ function AntiGingyAI.Angry_onEnter ( )
 	
     --sets animation
     this.setAngry ( )
+    
+    --plays angry sound
+    sound.play ( this.hEnemy ( ), 1, 0.2, false, 0 )
 	
 --------------------------------------------------------------------------------
 end

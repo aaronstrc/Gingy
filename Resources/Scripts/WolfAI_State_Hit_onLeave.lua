@@ -12,6 +12,9 @@ function WolfAI.Hit_onLeave ( )
     --if weapon doesn't exist don't delete it
     if(this.hWeapon ( ) ~= nil)then
         
+        --sends event to the weapon
+        object.sendEvent ( this.hWeapon ( ), "WeaponAI", "onSwingEnactivate" )
+        
         --destroys the runtime object
         scene.destroyRuntimeObject ( application.getCurrentUserScene ( ), this.hWeapon ( ) )
     

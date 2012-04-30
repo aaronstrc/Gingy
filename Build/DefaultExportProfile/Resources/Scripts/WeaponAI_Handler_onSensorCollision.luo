@@ -14,6 +14,8 @@ local sOName=object.getModelName(hTargetObject)
 
 if(sOName~=this.sUser()and this.bCollided()==false and this.bSwingActivated()==true)then
 
+log.warning("activated")
+
 
 local nAiModels=object.getAIModelCount(hTargetObject)
 
@@ -38,3 +40,4 @@ end
 
 
 end
+

@@ -1,0 +1,15 @@
+
+
+
+
+
+
+
+function AvatarAI.onHit()
+
+
+
+user.sendEvent(application.getCurrentUser(),"HudAI","onDecreaseHealth")
+
+
+end
